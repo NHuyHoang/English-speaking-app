@@ -4,6 +4,8 @@ import { AudioRecorder, AudioUtils } from 'react-native-audio';
 import { StyleSheet, View, Text, Button, Platform, PermissionsAndroid, ActivityIndicator, NetInfo } from 'react-native';
 import fs from 'react-native-fs';
 import { connect } from 'react-redux';
+import { DocumentPicker, DocumentPickerUtil } from 'react-native-document-picker';
+
 
 import fetchResult from '../services/GSpeech.service';
 import { tryGetStoredToken } from '../../store/actions/index'
@@ -34,7 +36,7 @@ class RecordSection extends React.Component {
         });
     }
 
-    componentWillMount(){
+    componentWillMount() {
         this.props.getAccessToken();
     }
 
@@ -195,6 +197,23 @@ class RecordSection extends React.Component {
             });
     }
 
+    _debug = () => {
+        DocumentPicker.show({
+            filetype: [DocumentPickerUtil.allFiles()],
+        }, (error, res) => {
+            console.log(res.type);
+            fs.readFile(res.uri, 'utf8')
+                .then((success) => {
+
+                    console.log(success);
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
+        });
+
+    }
+
     render() {
         let resultTxt = null;
         if (this.state.result) {
@@ -206,10 +225,12 @@ class RecordSection extends React.Component {
             <View style={styles.container}>
                 <Text style={styles.counter}>{this.state.currentTime}</Text>
                 <Text>second</Text>
+                <Text style={styles.testFont}>FS Nokio</Text>
+                <Text>FS Nokio</Text>
                 {this.state.fetchingResult ? <ActivityIndicator /> : resultTxt}
                 <View style={styles.btnContainer}>
                     <Button
-                        color={this.state.recording ? "#F44336": "#006064"}
+                        color={this.state.recording ? "#F44336" : "#006064"}
                         title={this.state.recording ? 'Stop' : 'Record'}
                         onPress={this.state.recording ? this._stop.bind(this) : this._record.bind(this)} />
                 </View>
@@ -218,6 +239,9 @@ class RecordSection extends React.Component {
                 </View>
                 <View style={styles.btnContainer}>
                     <Button color="#00BCD4" disabled={this.state.recording || !this.state.connectState || !this.props.access_token} title='Result' onPress={this._file} />
+                </View>
+                <View style={styles.btnContainer}>
+                    <Button color="#0097A7" disabled={this.state.recording} title='Debug' onPress={this._debug} />
                 </View>
             </View>
         )
@@ -229,6 +253,10 @@ const styles = StyleSheet.create({
         width: '100%',
         alignItems: 'center',
         justifyContent: 'center',
+    },
+    testFont: { 
+        fontFamily: "FS NokioLight",
+        fontSize: 50,
     },
     btnContainer: {
         width: '80%',

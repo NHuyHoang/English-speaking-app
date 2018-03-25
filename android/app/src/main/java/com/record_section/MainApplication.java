@@ -10,6 +10,7 @@ import com.facebook.soloader.SoLoader;
 import com.rnim.rn.audio.ReactNativeAudioPackage;
 import com.zmxv.RNSound.RNSoundPackage;
 import com.rnfs.RNFSPackage;
+import com.reactnativedocumentpicker.ReactNativeDocumentPicker;
 
 import java.util.Arrays;
 import java.util.List;
@@ -28,7 +29,8 @@ public class MainApplication extends Application implements ReactApplication {
           new MainReactPackage(),
           new ReactNativeAudioPackage(),
           new RNSoundPackage(),
-          new RNFSPackage()
+          new RNFSPackage(),
+          new ReactNativeDocumentPicker()
       );
     }
 

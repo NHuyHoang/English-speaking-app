@@ -93,6 +93,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="D:\ReactJS\react-native\record_section\android\app\build\intermediates\exploded-aar\record_section\react-native-document-picker\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="7fb6469ebee8229adbaeb2f156504c1160a8ec17">
+        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\record_section-react-native-document-picker-unspecified_6c2e309f07d62a11688386e5fce320afc1b14944.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="D:\Android\android-sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
         jumboMode="false"
         optimize="true"
