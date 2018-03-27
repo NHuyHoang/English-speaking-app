@@ -1,8 +1,10 @@
 import React from 'react';
-import { Text, View, StyleSheet, Button } from 'react-native';
+import { Text, View, StyleSheet, Button, TouchableWithoutFeedback, Dimensions } from 'react-native';
 import SentenceInput from '../../components/SentenceInput/SentenceInput';
 import uiStyle from '../../components/ui';
-import Icon from 'react-native-vector-icons/MaterialIcons'
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import { AnimatedCircularProgress } from 'react-native-circular-progress';
+import UtilComp from '../../components/UtilityComponent/UtilityComp'
 
 class Test1 extends React.Component {
     static navigationOptions = ({ navigation }) => ({
@@ -11,16 +13,53 @@ class Test1 extends React.Component {
             <Icon size={20} style={{ marginRight: 20, color: "white" }} name="build" />
         ),
     })
+    constructor(props) {
+        super(props);
+        this.state = {
+            timmer: 0
+        }
+        this._width = Dimensions.get('window').width;
+        this._height = Dimensions.get('window').height;
+    }
+
+    onCountDown = () => {
+        setInterval(() => this.setState(prevState => {
+            return { timmer: prevState.timmer + 1 }
+        }), 1000)
+    }
+
     render() {
         return (
             <View style={styles.container}>
-                <SentenceInput style={styles.input} />
-
-                <View style={{ marginTop:75}}><Text>Some component</Text></View>
+                <SentenceInput top={25} />
+                <AnimatedCircularProgress
+                    linecap="round"
+                    style={{
+                        position: 'absolute',
+                        top: this._height * 0.2
+                    }}
+                    size={this._width * 0.5}
+                    width={10}
+                    fill={(100 / 10) * this.state.timmer}
+                    rotation={0}
+                    tintColor={uiStyle.colors._blue}
+                    onAnimationComplete={() => console.log('onAnimationComplete')}
+                    backgroundColor="white" >
+                    {() => (
+                        <Text style={styles.timmerDisplay}>
+                            {this.state.timmer < 10 ? "0" + this.state.timmer : this.state.timmer}
+                        </Text>
+                    )}
+                </AnimatedCircularProgress>
+                <Text style={styles.guidelineTxt}>Add some sentence to start</Text>
+                <UtilComp style={styles.ultiComp}/>
             </View>
         )
     }
 }
+
+const _height = Dimensions.get('window').height;
+const _width =  Dimensions.get('window').width;
 
 const styles = StyleSheet.create({
     container: {
@@ -34,6 +73,23 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginTop: 20,
         backgroundColor: 'red'
+    },
+    sentenceInput: {
+        top: 20
+    },
+    timmerDisplay: {
+        color: 'white',
+        fontSize: 50,
+        fontFamily: uiStyle.fonts.font_bold
+    },
+    guidelineTxt:{
+        fontSize:uiStyle.fonts.title_size,
+        color:'white',
+        fontFamily:uiStyle.fonts.font_medium,
+        marginTop: _height * 0.55
+    },
+    ultiComp: {
+        marginTop: 50
     }
 })
 

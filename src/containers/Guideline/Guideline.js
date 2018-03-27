@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View, StyleSheet, Button, TouchableWithoutFeedback, Animated, Dimensions, PanResponder } from 'react-native';
 import uiStyle from '../../components/ui'
 
-class Guideline extends React.PureComponent {
+class Guideline extends React.Component {
     static navigationOptions = {
         header: null,
         title: 'Welcome',
@@ -31,8 +31,7 @@ class Guideline extends React.PureComponent {
             onPanResponderRelease: (evt, gestureState) => {
                 Animated.timing(this.state.startBtnAnim, {
                     toValue: 0,
-                    duration: 20,
-                    delay:1
+                    duration: 20
                 }).start(() => {
                     props.navigation.navigate('Test1')
                 })
@@ -53,7 +52,8 @@ class Guideline extends React.PureComponent {
                     Animated.spring(this.state.guideLinePanelAnim, {
                         toValue: 1,
                         stiffness: 90,
-                        damping: 12
+                        damping: 12,
+                        useNativeDriver:true
                     }),
                 ]).start()
             }
@@ -66,7 +66,8 @@ class Guideline extends React.PureComponent {
                     Animated.spring(this.state.guideLinePanelAnim, {
                         toValue: 0,
                         stiffness: 90,
-                        damping: 12
+                        damping: 12,
+                        useNativeDriver:true
                     }),
                 ]).start()
             }

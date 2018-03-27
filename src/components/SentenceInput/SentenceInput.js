@@ -1,10 +1,10 @@
 import React from 'react';
-import { Text, View, TextInput, StyleSheet, Dimensions, TouchableWithoutFeedback, TouchableOpacity ,Animated, FlatList } from 'react-native';
+import { Text, View, TextInput, StyleSheet, Dimensions, TouchableWithoutFeedback, TouchableOpacity, Animated, FlatList } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import uiStyle from '../ui';
-import SentenceItem from './SentenceItem'
+import SentenceItem from './SentenceItem';
 
-export default class SentenceInput extends React.PureComponent {
+class SentenceInput extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -13,15 +13,29 @@ export default class SentenceInput extends React.PureComponent {
         }
     }
 
+
     focusInput() {
-        this.setState({ focusInput: true }, () => {
-            Animated.timing(this.state.sentencePanelAnim, {
-                toValue: 1,
-                duration: 500
-            }).start()
-        })
+        if (this.state.focusInput) {
+            this.setState({ focusInput: false }, () => {
+                Animated.timing(this.state.sentencePanelAnim, {
+                    toValue: 0,
+                    duration: 500
+                }).start()
+            })
+
+        }
+        else {
+            this.setState({ focusInput: true }, () => {
+                Animated.timing(this.state.sentencePanelAnim, {
+                    toValue: 1,
+                    duration: 800
+                }).start()
+            })
+        }
+
     }
 
+   
     render() {
         let inputContent = (
             <View style={styles.altInputTxtContainer}>
@@ -33,29 +47,25 @@ export default class SentenceInput extends React.PureComponent {
                 <TextInput
                     autoFocus={true}
                     underlineColorAndroid={uiStyle.colors._blue}
-                    style={[this.props.style, styles.input]} />
+                    style={ styles.input} />
             );
         }
         return (
-            <View style={styles.container}>
+            <View style={[styles.container,{top:this.props.top}]}>
                 <Animated.View style={[styles.sentencePanel, {}, {
                     height: this.state.sentencePanelAnim.interpolate({
                         inputRange: [0, 1],
                         outputRange: [0, 250]
                     }),
-                    paddingBottom: this.state.sentencePanelAnim.interpolate({
-                        inputRange: [0, 1],
-                        outputRange: [0, 8]
-                    }),
                 }]}>
                     <FlatList
                         style={styles.flatList}
-                        data={["item1", "item2", "item3", "item4", "item1", "item2", "item3", "item4", "item1", "item2", "item3", "item4", "item1", "item2", "item3", "item4", "item1", "item2", "item3", "item4", "item1", "item2", "item3", "item4"]}
+                        data={["item1", "item2", "item3", "item4", "item1", "item2", "item3", "item4", "item1"]}
                         keyExtractor={item => Math.random()}
                         renderItem={({ item }, i) => <SentenceItem content={item} />}
                     />
                     <TouchableOpacity style={styles.storageBtnContainer}>
-                        <Icon size={20} name="sd-storage" color={uiStyle.colors._blue}/>
+                        <Icon size={20} name="sd-storage" color={uiStyle.colors._blue} />
                         <Text style={styles.storageBtn}>Import</Text>
                     </TouchableOpacity>
                 </Animated.View>
@@ -64,9 +74,9 @@ export default class SentenceInput extends React.PureComponent {
                         <View style={styles.inputContainer}>
                             {inputContent}
                         </View>
-                        <View style={styles.iconContainer}>
-                            <Icon size={30} name="keyboard" color="white" />
-                        </View>
+                        <TouchableOpacity onPress={this.focusInput.bind(this)} style={[styles.iconContainer,{backgroundColor: this.state.focusInput  ? uiStyle.colors._blue : uiStyle.colors._dark_gray}]}>
+                            {this.state.focusInput ? <Icon size={30} name="done" color="white" /> : <Icon size={30} name="keyboard" color="white" />}
+                        </TouchableOpacity>
                     </View>
                 </TouchableWithoutFeedback>
             </View>
@@ -77,7 +87,7 @@ export default class SentenceInput extends React.PureComponent {
 const styles = StyleSheet.create({
     container: {
         position: 'absolute',
-        zIndex: 1,
+        zIndex: 2,
         minHeight: 80,
         width: Dimensions.get('window').width * 0.85,
         alignContent: 'center',
@@ -115,7 +125,6 @@ const styles = StyleSheet.create({
         color: uiStyle.colors._dark_gray
     },
     iconContainer: {
-        backgroundColor: uiStyle.colors._dark_gray,
         width: 40,
         height: 40,
         borderRadius: 20,
@@ -143,7 +152,7 @@ const styles = StyleSheet.create({
     },
     storageBtnContainer: {
         width: '100%',
-        flexDirection:'row',
+        flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
     },
@@ -153,3 +162,7 @@ const styles = StyleSheet.create({
         color: uiStyle.colors._blue
     }
 })
+
+
+
+export default SentenceInput;
