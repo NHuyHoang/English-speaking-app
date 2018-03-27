@@ -226,5 +226,14 @@
         sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
         <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.0_d576d14013075001dcccf684eb9e49f1f57a6b1d.jar" />
     </item>
+    <item
+        is-multidex="false"
+        jar="D:\ReactJS\react-native\record_section\android\app\build\intermediates\exploded-aar\record_section\react-native-vector-icons\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f2cf527de8d0bd35d72088fafea02395ba4a9eec">
+        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\record_section-react-native-vector-icons-unspecified_092aeca48ce0e61532e73fefbe50b73d10ccd0a8.jar" />
+    </item>
 
 </items>
