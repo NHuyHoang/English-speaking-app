@@ -1,8 +1,9 @@
 import React from 'react';
 import { Text, View, StyleSheet, Button, TouchableWithoutFeedback, Dimensions } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 import SentenceInput from '../../components/SentenceInput/SentenceInput';
 import uiStyle from '../../components/ui';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import Timmer from '../../components/Timmer/Timmer';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
 import UtilComp from '../../components/UtilityComponent/UtilityComp'
 
@@ -16,10 +17,12 @@ class Test1 extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            timmer: 0
+            timmer: 0,
+            onStart:false
         }
         this._width = Dimensions.get('window').width;
         this._height = Dimensions.get('window').height;
+        this._screenHeight = 0;
     }
 
     onCountDown = () => {
@@ -28,9 +31,15 @@ class Test1 extends React.Component {
         }), 1000)
     }
 
+    onSetStart(){
+        this.setState({onStart:true})
+    }
+
     render() {
         return (
-            <View style={styles.container}>
+            <View style={styles.container} onLayout={(event) => {
+                this._screenHeight = event.nativeEvent.layout.height;
+            }}>
                 <SentenceInput top={25} />
                 <AnimatedCircularProgress
                     linecap="round"
@@ -52,14 +61,15 @@ class Test1 extends React.Component {
                     )}
                 </AnimatedCircularProgress>
                 <Text style={styles.guidelineTxt}>Add some sentence to start</Text>
-                <UtilComp style={styles.ultiComp}/>
+                <UtilComp style={styles.ultiComp} disabled={true} onSetStart={this.onSetStart.bind(this)}  />
+                {this.state.onStart ? <Timmer screenHeight={this._screenHeight} /> : null}
             </View>
         )
     }
 }
 
 const _height = Dimensions.get('window').height;
-const _width =  Dimensions.get('window').width;
+const _width = Dimensions.get('window').width;
 
 const styles = StyleSheet.create({
     container: {
@@ -82,10 +92,10 @@ const styles = StyleSheet.create({
         fontSize: 50,
         fontFamily: uiStyle.fonts.font_bold
     },
-    guidelineTxt:{
-        fontSize:uiStyle.fonts.title_size,
-        color:'white',
-        fontFamily:uiStyle.fonts.font_medium,
+    guidelineTxt: {
+        fontSize: uiStyle.fonts.title_size,
+        color: 'white',
+        fontFamily: uiStyle.fonts.font_medium,
         marginTop: _height * 0.55
     },
     ultiComp: {

@@ -15,27 +15,26 @@ class SentenceInput extends React.Component {
 
 
     focusInput() {
+
         if (this.state.focusInput) {
-            this.setState({ focusInput: false }, () => {
-                Animated.timing(this.state.sentencePanelAnim, {
-                    toValue: 0,
-                    duration: 500
-                }).start()
-            })
+            Animated.timing(this.state.sentencePanelAnim, {
+                toValue: 0,
+                duration: 200,
+            }).start(() => this.setState({ focusInput: false }))
+
 
         }
         else {
-            this.setState({ focusInput: true }, () => {
-                Animated.timing(this.state.sentencePanelAnim, {
-                    toValue: 1,
-                    duration: 800
-                }).start()
-            })
+            Animated.timing(this.state.sentencePanelAnim, {
+                toValue: 1,
+                duration: 200
+            }).start(() => this.setState({ focusInput: true }))
+
         }
 
     }
 
-   
+
     render() {
         let inputContent = (
             <View style={styles.altInputTxtContainer}>
@@ -47,11 +46,11 @@ class SentenceInput extends React.Component {
                 <TextInput
                     autoFocus={true}
                     underlineColorAndroid={uiStyle.colors._blue}
-                    style={ styles.input} />
+                    style={styles.input} />
             );
         }
         return (
-            <View style={[styles.container,{top:this.props.top}]}>
+            <View style={[styles.container, { top: this.props.top }]}>
                 <Animated.View style={[styles.sentencePanel, {}, {
                     height: this.state.sentencePanelAnim.interpolate({
                         inputRange: [0, 1],
@@ -74,7 +73,7 @@ class SentenceInput extends React.Component {
                         <View style={styles.inputContainer}>
                             {inputContent}
                         </View>
-                        <TouchableOpacity onPress={this.focusInput.bind(this)} style={[styles.iconContainer,{backgroundColor: this.state.focusInput  ? uiStyle.colors._blue : uiStyle.colors._dark_gray}]}>
+                        <TouchableOpacity onPress={this.focusInput.bind(this)} style={[styles.iconContainer, { backgroundColor: this.state.focusInput ? uiStyle.colors._blue : uiStyle.colors._dark_gray }]}>
                             {this.state.focusInput ? <Icon size={30} name="done" color="white" /> : <Icon size={30} name="keyboard" color="white" />}
                         </TouchableOpacity>
                     </View>

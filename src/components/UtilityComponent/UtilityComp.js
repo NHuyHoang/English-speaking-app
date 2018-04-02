@@ -1,5 +1,14 @@
 import React from 'react';
-import { View, Text, StyleSheet, Dimensions, TouchableWithoutFeedback, Button } from 'react-native';
+import {
+    View,
+    Text,
+    StyleSheet,
+    Dimensions,
+    TouchableWithoutFeedback,
+    Button,
+    PanResponder,
+    Animated
+} from 'react-native';
 import uiStyle from '../ui';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Wave from './wave'
@@ -7,11 +16,35 @@ import Wave from './wave'
 class UtilityComp extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            onStart: false
+        }
+        this.recoredBtnColorHandler = new Animated.Value(0);
+        this._panReponder = PanResponder.create({
+            onStartShouldSetPanResponder: (e, gesture) => true,
+            onPanResponderGrant: (e, gesture) => {
+                
+                this.recoredBtnColorHandler.setValue(1)
+            },
+            onPanResponderRelease: (e, gesture) => {
+                this.recoredBtnColorHandler.setValue(0)
+                this.setState({ onStart: true });
+                this.props.onSetStart();
+            }
+        })
+        
     }
     render() {
+        let recordAnim = {
+            backgroundColor: this.recoredBtnColorHandler.interpolate({
+                inputRange: [0, 1],
+                outputRange: [uiStyle.colors._red, '#B43636']
+            })
+
+        }
         return (
             <View style={[styles.container, this.props.style]}>
-                <View style={styles.backgroundGroup}>
+                <View style={[styles.backgroundGroup, , { opacity: this.props.disabled ? 0.5 : 1 }]}>
                     <TouchableWithoutFeedback>
                         <View style={styles.stopBtnContainer}>
                             <Icon style={{ marginLeft: 15 }} size={45} name="stop" color={uiStyle.colors._dark_gray} />
@@ -23,13 +56,13 @@ class UtilityComp extends React.Component {
                         </View>
                     </TouchableWithoutFeedback>
                 </View>
-                <Wave style={styles.waveContainer} delay={0} radiusScale={1.7}/>
-                <View style={styles.recordBtnContainer} >
-
-                    <View style={styles.recordBtn} >
+                <Wave style={styles.waveContainer} delay={0} radiusScale={1.7} />
+                <View {...this._panReponder.panHandlers} style={styles.recordBtnContainer} >
+                    <Animated.View style={[styles.recordBtn, recordAnim]} >
                         <Icon size={45} name="mic" color="white" />
-                    </View>
+                    </Animated.View>
                 </View>
+                
             </View>
         )
     }
@@ -63,12 +96,12 @@ const styles = StyleSheet.create({
         left: recordSize,
         borderTopRightRadius: 35,
         borderBottomRightRadius: 35,
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
     recordBtnContainer: {
         minHeight: recordSize,
         minWidth: recordSize,
-
+        zIndex:1,
         justifyContent: 'center',
         alignItems: 'center',
         position: 'absolute',
@@ -79,7 +112,6 @@ const styles = StyleSheet.create({
         height: recordSize,
         width: recordSize,
         borderRadius: recordSize / 2,
-        backgroundColor: uiStyle.colors._red,
         position: 'absolute',
         justifyContent: 'center',
         alignItems: 'center',

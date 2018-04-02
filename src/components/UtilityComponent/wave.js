@@ -20,15 +20,18 @@ export default class wave extends React.Component {
             Animated.timing(this.state.waveAnim,{
                 toValue:1,
                 timing:4000,
+                useNativeDriver:true
             }),
             Animated.timing(this.state.waveAnimOpac,{
                 toValue:0,
                 timing:4000,
+                useNativeDriver:true
             })
         ]).start(() => {
             Animated.timing(this.state.waveAnim,{
                 toValue:0,
                 timing:1,
+                useNativeDriver:true
             }).start(() => {
                 this.setState({waveAnimOpac: new Animated.Value(1)},() =>{
                     this.animHandler()
@@ -44,7 +47,7 @@ export default class wave extends React.Component {
                     {
                         scale:this.state.waveAnim.interpolate({
                             inputRange:[0,1],
-                            outputRange:[1,this.props.radiusScale]
+                            outputRange:[1,this.props.radiusScale],
                         })
                     }
                 ],
