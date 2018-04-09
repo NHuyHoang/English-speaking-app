@@ -23,16 +23,15 @@ class UtilityComp extends React.Component {
         this._panReponder = PanResponder.create({
             onStartShouldSetPanResponder: (e, gesture) => true,
             onPanResponderGrant: (e, gesture) => {
-                
                 this.recoredBtnColorHandler.setValue(1)
             },
             onPanResponderRelease: (e, gesture) => {
                 this.recoredBtnColorHandler.setValue(0)
                 this.setState({ onStart: true });
-                this.props.onSetStart();
+                this.props.onSetCountdown();
             }
         })
-        
+
     }
     render() {
         let recordAnim = {
@@ -56,13 +55,19 @@ class UtilityComp extends React.Component {
                         </View>
                     </TouchableWithoutFeedback>
                 </View>
-                <Wave style={styles.waveContainer} delay={0} radiusScale={1.7} />
+                {
+                    this.props.disabled
+                        ? <Wave style={styles.waveContainer}
+                            stop={!this.props.disabled} delay={0}
+                            radiusScale={1.7} />
+                        : null
+                }
                 <View {...this._panReponder.panHandlers} style={styles.recordBtnContainer} >
                     <Animated.View style={[styles.recordBtn, recordAnim]} >
-                        <Icon size={45} name="mic" color="white" />
+                        <Icon size={45} name={this.props.disabled ? "mic" : "pause"} color="white" />
                     </Animated.View>
                 </View>
-                
+
             </View>
         )
     }
@@ -101,7 +106,7 @@ const styles = StyleSheet.create({
     recordBtnContainer: {
         minHeight: recordSize,
         minWidth: recordSize,
-        zIndex:1,
+        zIndex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         position: 'absolute',

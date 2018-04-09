@@ -1,11 +1,14 @@
 import React from 'react';
 import { Text, View, StyleSheet, Button, TouchableWithoutFeedback, Dimensions } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import { connect } from 'react-redux';
+
 import SentenceInput from '../../components/SentenceInput/SentenceInput';
 import uiStyle from '../../components/ui';
 import Timmer from '../../components/Timmer/Timmer';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
-import UtilComp from '../../components/UtilityComponent/UtilityComp'
+import UtilComp from '../../components/UtilityComponent/UtilityComp';
+import { tryGetLocalFile } from '../../../store/actions/index'
 
 class Test1 extends React.Component {
     static navigationOptions = ({ navigation }) => ({
@@ -18,21 +21,37 @@ class Test1 extends React.Component {
         super(props);
         this.state = {
             timmer: 0,
-            onStart:false
+            onCountDown: false,
+            onStart: false
         }
         this._width = Dimensions.get('window').width;
         this._height = Dimensions.get('window').height;
         this._screenHeight = 0;
+        this.intervalId = null;
     }
 
-    onCountDown = () => {
-        setInterval(() => this.setState(prevState => {
+    onSentencesCountDown = () => {
+        this.intervalId = setInterval(() => this.setState(prevState => {
             return { timmer: prevState.timmer + 1 }
         }), 1000)
     }
 
-    onSetStart(){
-        this.setState({onStart:true})
+    componentDidMount() {
+        this.props.tryGetLocalFiles();
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.intervalId);
+    }
+
+    onSetCountdown() {
+        this.setState({ onCountDown: true })
+    }
+
+    onSetStart() {
+        this.setState({ onCountDown: false, onStart: true }, () => {
+            this.onSentencesCountDown()
+        });
     }
 
     render() {
@@ -49,10 +68,10 @@ class Test1 extends React.Component {
                     }}
                     size={this._width * 0.5}
                     width={10}
-                    fill={(100 / 10) * this.state.timmer}
+                    fill={(100 / 5) * this.state.timmer}
                     rotation={0}
                     tintColor={uiStyle.colors._blue}
-                    onAnimationComplete={() => console.log('onAnimationComplete')}
+                    //onAnimationComplete={}
                     backgroundColor="white" >
                     {() => (
                         <Text style={styles.timmerDisplay}>
@@ -61,8 +80,8 @@ class Test1 extends React.Component {
                     )}
                 </AnimatedCircularProgress>
                 <Text style={styles.guidelineTxt}>Add some sentence to start</Text>
-                <UtilComp style={styles.ultiComp} disabled={true} onSetStart={this.onSetStart.bind(this)}  />
-                {this.state.onStart ? <Timmer screenHeight={this._screenHeight} /> : null}
+                <UtilComp style={styles.ultiComp} disabled={!this.state.onStart} onSetCountdown={this.onSetCountdown.bind(this)} />
+                {this.state.onCountDown && !this.state.onStart ? <Timmer stop={this.onSetStart.bind(this)} screenHeight={this._screenHeight} /> : null}
             </View>
         )
     }
@@ -103,4 +122,10 @@ const styles = StyleSheet.create({
     }
 })
 
-export default Test1;
+const mapDispatchToProps = dispatch => {
+    return {
+        tryGetLocalFiles: () => dispatch(tryGetLocalFile())
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Test1);

@@ -1,6 +1,9 @@
 import React from 'react';
 import { Text, View, TextInput, StyleSheet, Dimensions, TouchableWithoutFeedback, TouchableOpacity, Animated, FlatList } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons'
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import { DocumentPicker, DocumentPickerUtil } from 'react-native-document-picker';
+import fs from 'react-native-fs';
+import { connect } from 'react-redux';
 import uiStyle from '../ui';
 import SentenceItem from './SentenceItem';
 
@@ -34,6 +37,21 @@ class SentenceInput extends React.Component {
 
     }
 
+    importDoc(){
+        DocumentPicker.show({
+            filetype: [DocumentPickerUtil.plainText()],
+        }, (error, res) => {
+            if(!res) return;
+            fs.readFile(res.uri, 'utf8')
+                .then((success) => {
+                    console.log(success);
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
+        });
+
+    }
 
     render() {
         let inputContent = (
@@ -59,11 +77,11 @@ class SentenceInput extends React.Component {
                 }]}>
                     <FlatList
                         style={styles.flatList}
-                        data={["item1", "item2", "item3", "item4", "item1", "item2", "item3", "item4", "item1"]}
+                        data={this.props.localSentences}
                         keyExtractor={item => Math.random()}
                         renderItem={({ item }, i) => <SentenceItem content={item} />}
                     />
-                    <TouchableOpacity style={styles.storageBtnContainer}>
+                    <TouchableOpacity onPress={this.importDoc.bind(this)} style={styles.storageBtnContainer}>
                         <Icon size={20} name="sd-storage" color={uiStyle.colors._blue} />
                         <Text style={styles.storageBtn}>Import</Text>
                     </TouchableOpacity>
@@ -162,6 +180,10 @@ const styles = StyleSheet.create({
     }
 })
 
+const mapStateToProps = state => {
+    return {
+        localSentences: state.files.sentences
+    }
+}
 
-
-export default SentenceInput;
+export default connect(mapStateToProps,null)(SentenceInput);

@@ -1,3 +1,7 @@
 export {
     tryGetStoredToken
-} from './auth'
+} from './auth';
+
+export {
+    tryGetLocalFile
+} from './files'
