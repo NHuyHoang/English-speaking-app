@@ -8,7 +8,8 @@ import uiStyle from '../../components/ui';
 import Timmer from '../../components/Timmer/Timmer';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
 import UtilComp from '../../components/UtilityComponent/UtilityComp';
-import { tryGetLocalFile } from '../../../store/actions/index'
+import { tryGetLocalFile } from '../../../store/actions/index';
+import NotiCompo from '../../hoc/noti';
 
 class Test1 extends React.Component {
     static navigationOptions = ({ navigation }) => ({
@@ -28,6 +29,8 @@ class Test1 extends React.Component {
         this._height = Dimensions.get('window').height;
         this._screenHeight = 0;
         this.intervalId = null;
+        this.onSetStart = this.onSetStartHandler.bind(this);
+        this.onSetCountdown = this.onSentencesCountDownHandler.bind(this);
     }
 
     onSentencesCountDown = () => {
@@ -37,18 +40,19 @@ class Test1 extends React.Component {
     }
 
     componentDidMount() {
-        this.props.tryGetLocalFiles();
+        if(this.props.sentences.length === 0)
+            this.props.tryGetLocalFiles();
     }
 
     componentWillUnmount() {
         clearInterval(this.intervalId);
     }
 
-    onSetCountdown() {
+    onSentencesCountDownHandler() {
         this.setState({ onCountDown: true })
     }
 
-    onSetStart() {
+    onSetStartHandler() {
         this.setState({ onCountDown: false, onStart: true }, () => {
             this.onSentencesCountDown()
         });
@@ -80,8 +84,8 @@ class Test1 extends React.Component {
                     )}
                 </AnimatedCircularProgress>
                 <Text style={styles.guidelineTxt}>Add some sentence to start</Text>
-                <UtilComp style={styles.ultiComp} disabled={!this.state.onStart} onSetCountdown={this.onSetCountdown.bind(this)} />
-                {this.state.onCountDown && !this.state.onStart ? <Timmer stop={this.onSetStart.bind(this)} screenHeight={this._screenHeight} /> : null}
+                <UtilComp style={styles.ultiComp} disabled={!this.state.onStart} onSetCountdown={this.onSetCountdown} />
+                {this.state.onCountDown && !this.state.onStart ? <Timmer stop={this.onSetStart} screenHeight={this._screenHeight} /> : null}
             </View>
         )
     }
@@ -122,10 +126,16 @@ const styles = StyleSheet.create({
     }
 })
 
+const mapStateToProps = state => {
+    return{
+        sentences: state.files.sentences
+    }
+}
+
 const mapDispatchToProps = dispatch => {
     return {
         tryGetLocalFiles: () => dispatch(tryGetLocalFile())
     }
 }
 
-export default connect(null, mapDispatchToProps)(Test1);
+export default connect(mapStateToProps, mapDispatchToProps)(Test1);

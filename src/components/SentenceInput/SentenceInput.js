@@ -1,11 +1,12 @@
 import React from 'react';
-import { Text, View, TextInput, StyleSheet, Dimensions, TouchableWithoutFeedback, TouchableOpacity, Animated, FlatList } from 'react-native';
+import { Text, View, TextInput, StyleSheet, Dimensions, TouchableWithoutFeedback, TouchableOpacity, Animated, FlatList, Keyboard } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { DocumentPicker, DocumentPickerUtil } from 'react-native-document-picker';
 import fs from 'react-native-fs';
 import { connect } from 'react-redux';
 import uiStyle from '../ui';
 import SentenceItem from './SentenceItem';
+import { tryConvertFile, tryRemoveSentences, tryAddSentence } from '../../../store/actions'
 
 class SentenceInput extends React.Component {
     constructor(props) {
@@ -14,8 +15,19 @@ class SentenceInput extends React.Component {
             focusInput: false,
             sentencePanelAnim: new Animated.Value(0)
         }
+        this.txtInput = "";
+        this.selectedSentences = [];
+        this.onSelectedSentence = (content, isSelected) => this.onSelectedSentenceHandler(content, isSelected);
+        this.onRemoveSentences = this.onRemoveSentencesHandler.bind(this);
+        this.onChangeText = (text) => { this.txtInput = text };
+        this.addSentence = this.addSentenceHandler.bind(this);
     }
 
+    componentDidUpdate(){
+        if(this.state.focusInput){
+            this.refs.flatList.scrollToEnd()
+        }
+    }
 
     focusInput() {
 
@@ -37,14 +49,33 @@ class SentenceInput extends React.Component {
 
     }
 
-    importDoc(){
+    onSelectedSentenceHandler(content, isSelected) {
+        if (isSelected) {
+            this.selectedSentences.push(content);
+        }
+        else {
+            this.selectedSentences = this.selectedSentences.filter(item => item !== content)
+        }
+    }
+
+    onRemoveSentencesHandler() {
+        this.props.removeSentences(this.selectedSentences);
+        this.selectedSentences = [];
+    }
+
+    addSentenceHandler() {
+        this.props.addSentence(this.txtInput)
+    }
+
+    importDoc() {
         DocumentPicker.show({
             filetype: [DocumentPickerUtil.plainText()],
         }, (error, res) => {
-            if(!res) return;
+            if (!res) return;
             fs.readFile(res.uri, 'utf8')
-                .then((success) => {
-                    console.log(success);
+                .then((files) => {
+                    this.props.convertFile(files);
+                    this.refs.flatList.scrollToEnd()
                 })
                 .catch((err) => {
                     console.log(err);
@@ -52,6 +83,8 @@ class SentenceInput extends React.Component {
         });
 
     }
+
+
 
     render() {
         let inputContent = (
@@ -62,6 +95,8 @@ class SentenceInput extends React.Component {
         if (this.state.focusInput) {
             inputContent = (
                 <TextInput
+                    onSubmitEditing={this.addSentence}
+                    onChangeText={this.onChangeText}
                     autoFocus={true}
                     underlineColorAndroid={uiStyle.colors._blue}
                     style={styles.input} />
@@ -76,15 +111,20 @@ class SentenceInput extends React.Component {
                     }),
                 }]}>
                     <FlatList
+                        ref="flatList"
                         style={styles.flatList}
                         data={this.props.localSentences}
                         keyExtractor={item => Math.random()}
-                        renderItem={({ item }, i) => <SentenceItem content={item} />}
+                        renderItem={({ item }, i) => <SentenceItem content={item} onSelected={this.onSelectedSentence} />}
                     />
-                    <TouchableOpacity onPress={this.importDoc.bind(this)} style={styles.storageBtnContainer}>
-                        <Icon size={20} name="sd-storage" color={uiStyle.colors._blue} />
-                        <Text style={styles.storageBtn}>Import</Text>
-                    </TouchableOpacity>
+                    <View style={styles.storageBtnContainer}>
+                        <TouchableOpacity onPress={this.importDoc.bind(this)} style={styles.btnContent}>
+                            <Icon size={20} name="sd-storage" color={uiStyle.colors._gray} />
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={this.onRemoveSentences} style={styles.btnContent}>
+                            <Icon size={23} name="delete-forever" color={uiStyle.colors._gray} />
+                        </TouchableOpacity>
+                    </View>
                 </Animated.View>
                 <TouchableWithoutFeedback onPress={this.focusInput.bind(this)}>
                     <View style={styles.inputMainContainer}>
@@ -169,6 +209,13 @@ const styles = StyleSheet.create({
     },
     storageBtnContainer: {
         width: '100%',
+        height: 50,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    btnContent: {
+        flex: 1,
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
@@ -185,5 +232,11 @@ const mapStateToProps = state => {
         localSentences: state.files.sentences
     }
 }
-
-export default connect(mapStateToProps,null)(SentenceInput);
+const mapDispatchToProps = dispatch => {
+    return {
+        convertFile: (files) => dispatch(tryConvertFile(files)),
+        removeSentences: (files) => dispatch(tryRemoveSentences(files)),
+        addSentence: (sentence) => dispatch(tryAddSentence(sentence))
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(SentenceInput);

@@ -3,5 +3,8 @@ export {
 } from './auth';
 
 export {
-    tryGetLocalFile
+    tryGetLocalFile,
+    tryConvertFile,
+    tryRemoveSentences,
+    tryAddSentence
 } from './files'
