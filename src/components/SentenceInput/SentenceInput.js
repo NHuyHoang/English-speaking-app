@@ -13,26 +13,27 @@ class SentenceInput extends React.Component {
         super(props);
         this.state = {
             focusInput: false,
-            sentencePanelAnim: new Animated.Value(0)
         }
         this.txtInput = "";
+        this.sentencePanelAnim = new Animated.Value(0);
         this.selectedSentences = [];
         this.onSelectedSentence = (content, isSelected) => this.onSelectedSentenceHandler(content, isSelected);
         this.onRemoveSentences = this.onRemoveSentencesHandler.bind(this);
         this.onChangeText = (text) => { this.txtInput = text };
         this.addSentence = this.addSentenceHandler.bind(this);
+        this.focusInput = this.focusInputHandler.bind(this)
     }
 
-    componentDidUpdate(){
-        if(this.state.focusInput){
-            this.refs.flatList.scrollToEnd()
+    componentDidUpdate() {
+        if (this.state.focusInput) {
+            this.refs.flatList.scrollToOffset({ offset: 0, animated: true });
         }
     }
 
-    focusInput() {
+    focusInputHandler() {
 
         if (this.state.focusInput) {
-            Animated.timing(this.state.sentencePanelAnim, {
+            Animated.timing(this.sentencePanelAnim, {
                 toValue: 0,
                 duration: 200,
             }).start(() => this.setState({ focusInput: false }))
@@ -40,7 +41,7 @@ class SentenceInput extends React.Component {
 
         }
         else {
-            Animated.timing(this.state.sentencePanelAnim, {
+            Animated.timing(this.sentencePanelAnim, {
                 toValue: 1,
                 duration: 200
             }).start(() => this.setState({ focusInput: true }))
@@ -95,6 +96,7 @@ class SentenceInput extends React.Component {
         if (this.state.focusInput) {
             inputContent = (
                 <TextInput
+                    blurOnSubmit={false}
                     onSubmitEditing={this.addSentence}
                     onChangeText={this.onChangeText}
                     autoFocus={true}
@@ -105,7 +107,7 @@ class SentenceInput extends React.Component {
         return (
             <View style={[styles.container, { top: this.props.top }]}>
                 <Animated.View style={[styles.sentencePanel, {}, {
-                    height: this.state.sentencePanelAnim.interpolate({
+                    height: this.sentencePanelAnim.interpolate({
                         inputRange: [0, 1],
                         outputRange: [0, 250]
                     }),
@@ -126,13 +128,13 @@ class SentenceInput extends React.Component {
                         </TouchableOpacity>
                     </View>
                 </Animated.View>
-                <TouchableWithoutFeedback onPress={this.focusInput.bind(this)}>
+                <TouchableWithoutFeedback onPress={this.focusInput}>
                     <View style={styles.inputMainContainer}>
                         <View style={styles.inputContainer}>
                             {inputContent}
                         </View>
-                        <TouchableOpacity onPress={this.focusInput.bind(this)} style={[styles.iconContainer, { backgroundColor: this.state.focusInput ? uiStyle.colors._blue : uiStyle.colors._dark_gray }]}>
-                            {this.state.focusInput ? <Icon size={30} name="done" color="white" /> : <Icon size={30} name="keyboard" color="white" />}
+                        <TouchableOpacity onPress={this.focusInput} style={[styles.iconContainer, { backgroundColor: this.state.focusInput ? uiStyle.colors._blue : uiStyle.colors._gray }]}>
+                            {this.state.focusInput ? <Icon size={20} name="done" color="white" /> : <Icon size={20} name="input" color="white" />}
                         </TouchableOpacity>
                     </View>
                 </TouchableWithoutFeedback>

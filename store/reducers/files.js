@@ -18,7 +18,7 @@ const reducer = (state = initateState, action) => {
             };
         }
         case (ADD_SENTENCE): {
-            state.sentences.push(action.sentence);
+            state.sentences.unshift(action.sentence);
             let result = [...state.sentences];
             return {
                 ...state,

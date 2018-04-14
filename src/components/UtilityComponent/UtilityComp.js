@@ -17,7 +17,7 @@ class UtilityComp extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            onStart: false
+            btnState: "mic",
         }
         this.recoredBtnColorHandler = new Animated.Value(0);
         this._panReponder = PanResponder.create({
@@ -26,13 +26,39 @@ class UtilityComp extends React.Component {
                 this.recoredBtnColorHandler.setValue(1)
             },
             onPanResponderRelease: (e, gesture) => {
-                this.recoredBtnColorHandler.setValue(0)
-                this.setState({ onStart: true });
-                this.props.onSetCountdown();
+                this.recoredBtnColorHandler.setValue(0);
+                switch (this.state.btnState) {
+                    case ("mic"): {
+                        this.setState({ btnState: "pause" });
+                        this.props.onSetCountdown();
+                    } break;
+                    case ("pause"): {
+                        this.setState({ btnState: "play-arrow" });
+                        this.props.onSetPause();
+                    } break;
+                    case ("play-arrow"): {
+                        this.setState({ btnState: "pause" });
+                        this.props.onSetResume();
+                    } break;
+                }
+
             }
         })
 
     }
+
+    componentWillReceiveProps(props) {
+
+        /*   if (props.onPause && props.onStart && !props.onResume) {
+              this.setState({ btnState: "play-arrow" })
+          }
+          if (props.onStart && !props.onPause && !props.onResume) {
+              this.setState({ btnState: "pause" })
+          } */
+    }
+
+
+
     render() {
         let recordAnim = {
             backgroundColor: this.recoredBtnColorHandler.interpolate({
@@ -43,7 +69,7 @@ class UtilityComp extends React.Component {
         }
         return (
             <View style={[styles.container, this.props.style]}>
-                <View style={[styles.backgroundGroup, , { opacity: this.props.disabled ? 0.5 : 1 }]}>
+                <View style={[styles.backgroundGroup, , { opacity: this.state.btnState === "mic" ? 0.5 : 1 }]}>
                     <TouchableWithoutFeedback>
                         <View style={styles.stopBtnContainer}>
                             <Icon style={{ marginLeft: 15 }} size={45} name="stop" color={uiStyle.colors._dark_gray} />
@@ -56,15 +82,15 @@ class UtilityComp extends React.Component {
                     </TouchableWithoutFeedback>
                 </View>
                 {
-                    this.props.disabled
+                    this.state.btnState === "mic"
                         ? <Wave style={styles.waveContainer}
-                            stop={!this.props.disabled} delay={0}
+                            stop={!this.state.btnState === "mic"} delay={0}
                             radiusScale={1.7} />
                         : null
                 }
                 <View {...this._panReponder.panHandlers} style={styles.recordBtnContainer} >
                     <Animated.View style={[styles.recordBtn, recordAnim]} >
-                        <Icon size={45} name={this.props.disabled ? "mic" : "pause"} color="white" />
+                        <Icon size={45} name={this.state.btnState} color="white" />
                     </Animated.View>
                 </View>
 
@@ -82,6 +108,8 @@ const bgGroupHeight = 70;
 
 const styles = StyleSheet.create({
     container: {
+        marginTop: 'auto',
+        marginBottom: 20,
         height: recordSize,
         width: elementWidth,
         flexDirection: 'row',
