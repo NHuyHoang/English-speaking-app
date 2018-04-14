@@ -1,15 +1,12 @@
 import React from 'react';
-import { Text, View, StyleSheet, Button, TouchableWithoutFeedback, Dimensions, Easing, Animated } from 'react-native';
+import { Text, View, StyleSheet, Button, TouchableWithoutFeedback, Dimensions, Easing, Animated, NetInfo } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { connect } from 'react-redux';
 
-import SentenceInput from '../../components/SentenceInput/SentenceInput';
 import uiStyle from '../../components/ui';
-import Timmer from '../../components/Timmer/Timmer';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
-import UtilComp from '../../components/UtilityComponent/UtilityComp';
+import { SentenceInput, Timmer, UtilComp, Notification } from '../../components'
 import { tryGetLocalFile } from '../../../store/actions/index';
-import NotiCompo from '../../hoc/noti';
 
 class Test1 extends React.Component {
     static navigationOptions = ({ navigation }) => ({
@@ -25,7 +22,7 @@ class Test1 extends React.Component {
             onCountDown: false,
             onPause: false,
             onStart: false,
-            displaySentence: null
+            displaySentence: null,
         }
         this.popIndex = 0;
         this.preparedInput = [];
@@ -35,10 +32,6 @@ class Test1 extends React.Component {
         this.sentencePanelAnim = new Animated.Value(0);
         this._screenHeight = 0;
         this.intervalId = null;
-        this.onSetStart = this.onSetStartHandler.bind(this);
-        this.onSetPause = this.onSetPauseHandler.bind(this);
-        this.onSetCountdown = this.onSentencesCountDownHandler.bind(this);
-        this.onSetResume = this.onSetResumeHandler.bind(this);
     }
 
     onSentencesCountDown = () => {
@@ -55,13 +48,24 @@ class Test1 extends React.Component {
                     return { timmer: 0, displaySentence: this.preparedInput[this.popIndex++] }
                 return { timmer: prevState.timmer + 1 }
             });
-        }, 1001)
+        }, 1010)
+    }
+
+    onSkipSentence = () => {
+        const reloadSec = this.state.timmer * 150;
+        const alreadyPause = this.state.onPause;
+        this.setState({ onPause: true }, () => {
+            this.setState({ timmer: 0 }, () => {
+                setTimeout(() => {
+                    this.setState({ onPause: alreadyPause, displaySentence: this.preparedInput[this.popIndex++] })
+                }, 500)
+            })
+        })
     }
 
     componentDidMount() {
         if (this.props.sentences.length === 0)
             this.props.tryGetLocalFiles();
-
     }
 
     componentDidUpdate() {
@@ -76,23 +80,23 @@ class Test1 extends React.Component {
         clearInterval(this.intervalId);
     }
 
-    onSentencesCountDownHandler() {
+    onSentencesCountDownHandler = () => {
 
         this.setState({ onCountDown: true })
     }
 
-    onSetStartHandler() {
+    onSetStartHandler = () => {
         this.setState({ displaySentence: this.preparedInput[this.popIndex++] });
         this.setState({ onCountDown: false, onStart: true }, () => {
             this.onSentencesCountDown();
         });
     }
 
-    onSetPauseHandler() {
+    onSetPauseHandler = () => {
         this.setState({ onPause: true });
     }
 
-    onSetResumeHandler(){
+    onSetResumeHandler = () => {
         this.setState({ onPause: false });
     }
 
@@ -133,7 +137,7 @@ class Test1 extends React.Component {
             <View style={styles.container} onLayout={(event) => {
                 this._screenHeight = event.nativeEvent.layout.height;
             }}>
-                <SentenceInput top={25} />
+                <SentenceInput top={25} disabled={this.state.onStart} />
                 <AnimatedCircularProgress
                     ref='circularProgress'
                     style={{
@@ -156,18 +160,24 @@ class Test1 extends React.Component {
                 {this.state.onStart ? null : <Text style={styles.guidelineTxt}>Add some sentence to start</Text>}
                 <Animated.View style={[styles.sentencePanel, sentencePanelTransform]}>
                     <Animated.View>
-                        <Text style={styles.sentenceTxt}>{this.state.displaySentence}</Text>
+                        <Text style={styles.sentenceTxt}>
+                            {this.state.onPause ?
+                                <Icon name="pause-circle-outline" size={40} color={uiStyle.colors._dark_gray} /> :
+                                this.state.displaySentence}
+                        </Text>
                     </Animated.View>
                 </Animated.View>
                 <UtilComp
                     style={styles.ultiComp}
-                    onSetCountdown={this.onSetCountdown}
-                    onSetPause={this.onSetPause}
-                    onSetResume={this.onSetResume} />
+                    onSetCountdown={this.onSentencesCountDownHandler}
+                    onSetPause={this.onSetPauseHandler}
+                    onSkip={this.onSkipSentence}
+                    onSetResume={this.onSetResumeHandler} />
                 {
                     this.state.onCountDown && !this.state.onStart ?
-                        <Timmer stop={this.onSetStart} screenHeight={this._screenHeight} /> : null
+                        <Timmer stop={this.onSetStartHandler} screenHeight={this._screenHeight} /> : null
                 }
+                <Notification />
             </View>
         )
     }

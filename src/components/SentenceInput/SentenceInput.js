@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, TextInput, StyleSheet, Dimensions, TouchableWithoutFeedback, TouchableOpacity, Animated, FlatList, Keyboard } from 'react-native';
+import { Text, View, TextInput, StyleSheet, Dimensions, TouchableWithoutFeedback, TouchableOpacity, TouchableNativeFeedback, Animated, FlatList, Keyboard } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { DocumentPicker, DocumentPickerUtil } from 'react-native-document-picker';
 import fs from 'react-native-fs';
@@ -20,8 +20,8 @@ class SentenceInput extends React.Component {
         this.onSelectedSentence = (content, isSelected) => this.onSelectedSentenceHandler(content, isSelected);
         this.onRemoveSentences = this.onRemoveSentencesHandler.bind(this);
         this.onChangeText = (text) => { this.txtInput = text };
-        this.addSentence = this.addSentenceHandler.bind(this);
-        this.focusInput = this.focusInputHandler.bind(this)
+        /* this.addSentence = this.addSentenceHandler.bind(this);
+        this.focusInput = this.focusInputHandler.bind(this) */
     }
 
     componentDidUpdate() {
@@ -30,8 +30,8 @@ class SentenceInput extends React.Component {
         }
     }
 
-    focusInputHandler() {
-
+    focusInputHandler = () => {
+        if (this.props.disabled) return;
         if (this.state.focusInput) {
             Animated.timing(this.sentencePanelAnim, {
                 toValue: 0,
@@ -64,11 +64,11 @@ class SentenceInput extends React.Component {
         this.selectedSentences = [];
     }
 
-    addSentenceHandler() {
+    addSentenceHandler = () => {
         this.props.addSentence(this.txtInput)
     }
 
-    importDoc() {
+    importDoc = () => {
         DocumentPicker.show({
             filetype: [DocumentPickerUtil.plainText()],
         }, (error, res) => {
@@ -97,7 +97,7 @@ class SentenceInput extends React.Component {
             inputContent = (
                 <TextInput
                     blurOnSubmit={false}
-                    onSubmitEditing={this.addSentence}
+                    onSubmitEditing={this.addSentenceHandler}
                     onChangeText={this.onChangeText}
                     autoFocus={true}
                     underlineColorAndroid={uiStyle.colors._blue}
@@ -120,12 +120,20 @@ class SentenceInput extends React.Component {
                         renderItem={({ item }, i) => <SentenceItem content={item} onSelected={this.onSelectedSentence} />}
                     />
                     <View style={styles.storageBtnContainer}>
-                        <TouchableOpacity onPress={this.importDoc.bind(this)} style={styles.btnContent}>
-                            <Icon size={20} name="sd-storage" color={uiStyle.colors._gray} />
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={this.onRemoveSentences} style={styles.btnContent}>
-                            <Icon size={23} name="delete-forever" color={uiStyle.colors._gray} />
-                        </TouchableOpacity>
+                        <TouchableNativeFeedback
+                            onPress={this.importDoc}
+                            background={TouchableNativeFeedback.Ripple('rgba(0,0,0,0.3)', true)} >
+                            <View style={styles.btnContent}>
+                                <Icon size={20} name="sd-storage" color={uiStyle.colors._gray} />
+                            </View>
+                        </TouchableNativeFeedback>
+                        <TouchableNativeFeedback
+                            onPress={this.onRemoveSentences}
+                            background={TouchableNativeFeedback.Ripple('rgba(0,0,0,0.3)', true)} >
+                            <View onPress={this.onRemoveSentences} style={styles.btnContent}>
+                                <Icon size={23} name="delete-forever" color={uiStyle.colors._gray} />
+                            </View>
+                        </TouchableNativeFeedback>
                     </View>
                 </Animated.View>
                 <TouchableWithoutFeedback onPress={this.focusInput}>
@@ -133,12 +141,16 @@ class SentenceInput extends React.Component {
                         <View style={styles.inputContainer}>
                             {inputContent}
                         </View>
-                        <TouchableOpacity onPress={this.focusInput} style={[styles.iconContainer, { backgroundColor: this.state.focusInput ? uiStyle.colors._blue : uiStyle.colors._gray }]}>
-                            {this.state.focusInput ? <Icon size={20} name="done" color="white" /> : <Icon size={20} name="input" color="white" />}
-                        </TouchableOpacity>
+                        <TouchableNativeFeedback
+                            onPress={this.focusInputHandler}
+                            background={TouchableNativeFeedback.Ripple('rgba(0,0,0,0.5)', true)} >
+                            <View style={[styles.iconContainer, { backgroundColor: this.state.focusInput ? uiStyle.colors._blue : uiStyle.colors._gray }]}>
+                                {this.state.focusInput ? <Icon size={20} name="done" color="white" /> : <Icon size={20} name="input" color="white" />}
+                            </View>
+                        </TouchableNativeFeedback>
                     </View>
                 </TouchableWithoutFeedback>
-            </View>
+            </View >
         )
     }
 }

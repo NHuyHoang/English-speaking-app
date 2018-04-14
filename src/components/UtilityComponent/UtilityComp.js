@@ -5,6 +5,7 @@ import {
     StyleSheet,
     Dimensions,
     TouchableWithoutFeedback,
+    TouchableNativeFeedback,
     Button,
     PanResponder,
     Animated
@@ -70,16 +71,19 @@ class UtilityComp extends React.Component {
         return (
             <View style={[styles.container, this.props.style]}>
                 <View style={[styles.backgroundGroup, , { opacity: this.state.btnState === "mic" ? 0.5 : 1 }]}>
-                    <TouchableWithoutFeedback>
+                    <TouchableNativeFeedback
+                        background={TouchableNativeFeedback.Ripple('rgba(0,0,0,0.3)', true)} >
                         <View style={styles.stopBtnContainer}>
                             <Icon style={{ marginLeft: 15 }} size={45} name="stop" color={uiStyle.colors._dark_gray} />
                         </View>
-                    </TouchableWithoutFeedback>
-                    <TouchableWithoutFeedback >
+                    </TouchableNativeFeedback>
+                    <TouchableNativeFeedback
+                        onPress={this.props.onSkip}
+                        background={TouchableNativeFeedback.Ripple('rgba(0,0,0,0.3)', true)} >
                         <View style={styles.skipBtnContainer}>
                             <Icon style={{ marginRight: 15, marginLeft: "auto" }} size={45} name="skip-next" color={uiStyle.colors._dark_gray} />
                         </View>
-                    </TouchableWithoutFeedback>
+                    </TouchableNativeFeedback>
                 </View>
                 {
                     this.state.btnState === "mic"
