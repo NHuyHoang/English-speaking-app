@@ -34,8 +34,7 @@ class UtilityComp extends React.Component {
                         this.props.onSetCountdown();
                     } break;
                     case ("pause"): {
-                        this.setState({ btnState: "play-arrow" });
-                        this.props.onSetPause();
+                        this.props.onPause(() => this.setState({ btnState: "play-arrow" }))
                     } break;
                     case ("play-arrow"): {
                         this.setState({ btnState: "pause" });
@@ -114,8 +113,6 @@ const styles = StyleSheet.create({
     container: {
         marginTop: 'auto',
         marginBottom: 20,
-        height: recordSize,
-        width: elementWidth,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center'
@@ -159,8 +156,6 @@ const styles = StyleSheet.create({
         minWidth: recordSize, */
         left: buttonSize,
         position: 'absolute',
-        zIndex: 1,
-        elevation: 7,
     },
     backgroundGroup: {
         height: bgGroupHeight,

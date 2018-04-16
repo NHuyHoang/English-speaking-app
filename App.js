@@ -9,6 +9,7 @@ import uiStyle from './src/components/ui'
 export default class App extends React.Component {
   render() {
     return <RootStack style={styles.container} />;
+    //return <Record/>
   }
 }
 
@@ -37,17 +38,14 @@ const RootStack = StackNavigator(
   {
     initialRouteName: 'Home',
     navigationOptions: {
-      headerStyle: {
-        backgroundColor: uiStyle.colors._blue,
-        height: 40,
-      },
-      headerTintColor: '#fff',
+      header:null,
+     /*  headerTintColor: '#fff',
       headerTitleStyle: {
         fontFamily: uiStyle.fonts.font_bold,
         fontSize: uiStyle.fonts.title_size,
         fontWeight:'bold',
         alignSelf:'center'
-      },
+      }, */
     },
   }
 );

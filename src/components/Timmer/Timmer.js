@@ -51,7 +51,7 @@ export default class Timmer extends React.Component {
                         {this.state.counter > 0 ? this.state.counter : "Start"}
                     </Text>
                 </Animated.View>
-                <Text style={styles.remainTxt}>seconds remaining</Text>
+                <Text style={styles.remainTxt}>second(s) remaining</Text>
             </View>
         )
     }
@@ -65,8 +65,7 @@ const styles = StyleSheet.create({
         width: _width,
         position: 'absolute',
         elevation: 9,
-        backgroundColor: 'black',
-        opacity: 0.85,
+        backgroundColor: 'rgba(0,0,0,0.8)',
         alignItems: 'center',
     },
     couterTxt: {

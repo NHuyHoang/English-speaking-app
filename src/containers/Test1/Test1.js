@@ -5,16 +5,10 @@ import { connect } from 'react-redux';
 
 import uiStyle from '../../components/ui';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
-import { SentenceInput, Timmer, UtilComp, Notification } from '../../components'
+import { SentenceInput, Timmer, UtilComp, Notification, Header } from '../../components'
 import { tryGetLocalFile } from '../../../store/actions/index';
 
-class Test1 extends React.Component {
-    static navigationOptions = ({ navigation }) => ({
-        title: "Test 1",
-        headerRight: (
-            <Icon size={20} style={{ marginRight: 20, color: "white" }} name="build" />
-        ),
-    })
+class Test1 extends React.PureComponent {
     constructor(props) {
         super(props);
         this.state = {
@@ -22,33 +16,55 @@ class Test1 extends React.Component {
             onCountDown: false,
             onPause: false,
             onStart: false,
+            onShowResult: false,
             displaySentence: null,
+            indexColor: uiStyle.colors._blue
         }
         this.popIndex = 0;
         this.preparedInput = [];
-        this.timePerSentence = 5;
+        this.timePerSentence = 3;
         this._width = Dimensions.get('window').width;
         this._height = Dimensions.get('window').height;
+        this.sentencePanelPos = this._height * 0.65;
         this.sentencePanelAnim = new Animated.Value(0);
+        this.resultPanelAnim = new Animated.Value(0);
         this._screenHeight = 0;
         this.intervalId = null;
     }
 
     onSentencesCountDown = () => {
-        Animated.spring(this.sentencePanelAnim, {
-            toValue: 1,
-            stiffness: 120,
-            damping: 12,
-            useNativeDriver: true
-        }).start();
-        this.intervalId = setInterval(() => {
-            if (this.state.onPause) return;
-            this.setState(prevState => {
-                if (prevState.timmer === this.timePerSentence)
-                    return { timmer: 0, displaySentence: this.preparedInput[this.popIndex++] }
-                return { timmer: prevState.timmer + 1 }
-            });
-        }, 1010)
+        //Sentence panel and result panel parallel slide from top
+        Animated.parallel([
+            Animated.spring(this.sentencePanelAnim, {
+                toValue: this.sentencePanelPos,
+                stiffness: 140,
+                damping: 17,
+                useNativeDriver: true
+            }),
+            //show the result panel
+            Animated.timing(this.resultPanelAnim, {
+                toValue: this.sentencePanelPos + 65,
+                duration: 200,
+                useNativeDriver: true
+            })
+        ]).start(() => {
+            this.intervalId = setInterval(() => {
+                if (this.state.onPause) return;
+                if (this.testFinhished()) {
+                    clearInterval(this.intervalId);
+                    this.onFinishHandler();
+                    return;
+                }
+                this.setState(prevState => {
+                    if (prevState.timmer === this.timePerSentence)
+                        return {
+                            timmer: 0,
+                            displaySentence: this.preparedInput[this.popIndex++],
+                        }
+                    return { timmer: prevState.timmer + 1 }
+                });
+            }, 1010)
+        });
     }
 
     onSkipSentence = () => {
@@ -61,6 +77,21 @@ class Test1 extends React.Component {
                 }, 500)
             })
         })
+    }
+
+    onFinishHandler = () => {
+        Animated.parallel([
+            Animated.timing(this.sentencePanelAnim, {
+                toValue: this._height + 70,
+                duration: 300,
+                useNativeDriver: true
+            }),
+            Animated.timing(this.resultPanelAnim, {
+                toValue: this._height + 70,
+                duration: 300,
+                useNativeDriver: true
+            }),
+        ]).start(() => this.setState({ onStart: false }));
     }
 
     componentDidMount() {
@@ -86,18 +117,28 @@ class Test1 extends React.Component {
     }
 
     onSetStartHandler = () => {
+        this.preparedInput = this.shuffle(this.preparedInput);
         this.setState({ displaySentence: this.preparedInput[this.popIndex++] });
         this.setState({ onCountDown: false, onStart: true }, () => {
             this.onSentencesCountDown();
         });
     }
 
-    onSetPauseHandler = () => {
-        this.setState({ onPause: true });
+    onBackScreen = () => {
+        this.props.navigation.goBack(null)
+    }
+
+    onSetPauseHandler = (callback) => {
+        if (this.state.onPause) return;
+        this.setState({ onPause: true, indexColor: uiStyle.colors._red }, callback());
     }
 
     onSetResumeHandler = () => {
-        this.setState({ onPause: false });
+        this.setState({ onPause: false, indexColor: uiStyle.colors._blue });
+    }
+
+    testFinhished = () => {
+        return this.popIndex === this.preparedInput.length;
     }
 
     //shuffle senetences
@@ -124,53 +165,57 @@ class Test1 extends React.Component {
 
     render() {
         let sentencePanelTransform = {
-            transform: [
-                {
-                    translateY: this.sentencePanelAnim.interpolate({
-                        inputRange: [0, 1],
-                        outputRange: [0, _height * 0.6]
-                    })
-                }
-            ]
+            transform: [{ translateY: this.sentencePanelAnim }]
+        }
+        let resultPanelTransform = {
+            transform: [{ translateY: this.resultPanelAnim }]
         }
         return (
-            <View style={styles.container} onLayout={(event) => {
-                this._screenHeight = event.nativeEvent.layout.height;
-            }}>
-                <SentenceInput top={25} disabled={this.state.onStart} />
+            <View
+                style={[styles.container, {
+                    backgroundColor: this.state.indexColor,
+                }]} onLayout={(event) => {
+                    this._screenHeight = event.nativeEvent.layout.height;
+                }}>
+                <Header bgColor={this.state.indexColor} onBack={() => this.onBackScreen()} />
+                <SentenceInput top={62} disabled={this.state.onStart} />
                 <AnimatedCircularProgress
                     ref='circularProgress'
                     style={{
                         position: 'absolute',
-                        top: this._height * 0.2
+                        top: this._height * 0.39 - ((this._width * 0.5) / 2)
                     }}
                     size={this._width * 0.5}
                     width={10}
                     fill={(100 / this.timePerSentence) * this.state.timmer}
                     rotation={0}
-                    tintColor={uiStyle.colors._blue}
+                    tintColor={this.state.indexColor}
                     //onAnimationComplete={}
                     backgroundColor="white" >
                     {() => (
                         <Text style={styles.timmerDisplay}>
-                            {this.state.timmer < 10 ? "0" + this.state.timmer : this.state.timmer}
+                            {this.state.timmer}
                         </Text>
                     )}
                 </AnimatedCircularProgress>
-                {this.state.onStart ? null : <Text style={styles.guidelineTxt}>Add some sentence to start</Text>}
                 <Animated.View style={[styles.sentencePanel, sentencePanelTransform]}>
                     <Animated.View>
                         <Text style={styles.sentenceTxt}>
-                            {this.state.onPause ?
-                                <Icon name="pause-circle-outline" size={40} color={uiStyle.colors._dark_gray} /> :
-                                this.state.displaySentence}
+                            {this.state.displaySentence}
                         </Text>
                     </Animated.View>
+                </Animated.View>
+                <Animated.View style={[styles.resultPanel, resultPanelTransform]}>
+                    <Icon style={{ position: 'absolute', left: 16 }} name="record-voice-over" size={20} />
+                    <Text style={styles.resultTxt}>
+                        {this.state.displaySentence}
+                    </Text>
+
                 </Animated.View>
                 <UtilComp
                     style={styles.ultiComp}
                     onSetCountdown={this.onSentencesCountDownHandler}
-                    onSetPause={this.onSetPauseHandler}
+                    onPause={this.onSetPauseHandler}
                     onSkip={this.onSkipSentence}
                     onSetResume={this.onSetResumeHandler} />
                 {
@@ -188,7 +233,6 @@ const _width = Dimensions.get('window').width;
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: uiStyle.colors._blue,
         alignItems: 'center',
         flex: 1,
     },
@@ -204,7 +248,7 @@ const styles = StyleSheet.create({
     },
     timmerDisplay: {
         color: 'white',
-        fontSize: 50,
+        fontSize: 80,
         fontFamily: uiStyle.fonts.font_bold
     },
     guidelineTxt: {
@@ -221,6 +265,20 @@ const styles = StyleSheet.create({
         width: "90%",
         height: 60,
         borderRadius: 99,
+        zIndex: 3,
+        position: "absolute",
+        top: -60,
+        backgroundColor: 'white',
+        alignItems: 'center',
+        justifyContent: 'center',
+        elevation: 8,
+        paddingLeft: 12,
+        paddingRight: 12,
+    },
+    resultPanel: {
+        width: "80%",
+        height: 45,
+        borderRadius: 99,
         zIndex: 2,
         position: "absolute",
         top: -60,
@@ -229,11 +287,17 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         elevation: 8,
         paddingLeft: 12,
-        paddingRight: 12
+        paddingRight: 12,
+        flexDirection: 'row'
     },
     sentenceTxt: {
-        fontFamily: uiStyle.font_medium,
+        fontFamily: uiStyle.fonts.font_bold,
         fontSize: 16,
+        textAlign: 'center'
+    },
+    resultTxt: {
+        fontFamily: uiStyle.fonts.font_bold,
+        fontSize: 14,
         textAlign: 'center'
     }
 })

@@ -15,6 +15,7 @@ export default {
         _green: "#40E6A8",
         _red: "#FC4848",
         _light_gray: "#D8D8D8",
+        _yellow:'#FFB700',
         _gray:'#BFBFBF',
         _smoke:'#E0E0E0',
         _dark_gray:'#5C5C5C'
