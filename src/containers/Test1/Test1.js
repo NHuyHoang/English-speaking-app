@@ -38,33 +38,41 @@ class Test1 extends React.PureComponent {
             Animated.spring(this.sentencePanelAnim, {
                 toValue: this.sentencePanelPos,
                 stiffness: 140,
-                damping: 17,
+                damping: 12,
                 useNativeDriver: true
             }),
             //show the result panel
-            Animated.timing(this.resultPanelAnim, {
+            Animated.spring(this.resultPanelAnim, {
                 toValue: this.sentencePanelPos + 65,
-                duration: 200,
+                stiffness: 160,
+                damping: 12,
                 useNativeDriver: true
             })
-        ]).start(() => {
-            this.intervalId = setInterval(() => {
-                if (this.state.onPause) return;
-                if (this.testFinhished()) {
-                    clearInterval(this.intervalId);
-                    this.onFinishHandler();
-                    return;
+        ]).start()
+        this.intervalId = setInterval(() => {
+            if (this.state.onPause) return;
+            if (this.testFinhished()) {
+                clearInterval(this.intervalId);
+                this.onFinishHandler();
+                return;
+            }
+            this.setState(prevState => {
+                if (prevState.timmer === this.timePerSentence)
+                    return {
+                        onPause: true,
+                    }
+                return { timmer: prevState.timmer + 1 }
+            }, () => {
+                if (this.state.onPause) {
+                    setTimeout(() => {
+                        this.setState({
+                            timmer: 0, onPause: false, displaySentence: this.preparedInput[this.popIndex++],
+                        })
+                    }, 2000);
                 }
-                this.setState(prevState => {
-                    if (prevState.timmer === this.timePerSentence)
-                        return {
-                            timmer: 0,
-                            displaySentence: this.preparedInput[this.popIndex++],
-                        }
-                    return { timmer: prevState.timmer + 1 }
-                });
-            }, 1010)
-        });
+            });
+        }, 1000)
+
     }
 
     onSkipSentence = () => {
@@ -100,10 +108,6 @@ class Test1 extends React.PureComponent {
     }
 
     componentDidUpdate() {
-        if (this.preparedInput.length === 0) {
-            this.preparedInput = this.shuffle([...this.props.sentences]);
-        }
-
     }
 
 
@@ -117,7 +121,7 @@ class Test1 extends React.PureComponent {
     }
 
     onSetStartHandler = () => {
-        this.preparedInput = this.shuffle(this.preparedInput);
+        this.preparedInput = this.shuffle([...this.props.sentences]);
         this.setState({ displaySentence: this.preparedInput[this.popIndex++] });
         this.setState({ onCountDown: false, onStart: true }, () => {
             this.onSentencesCountDown();
