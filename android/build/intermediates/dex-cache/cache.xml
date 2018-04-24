@@ -21,6 +21,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\SONY\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.6.0\69edde9fc4b01c9fd51d25b83428837478c27254\okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\okhttp-3.6.0_f6ec1980ff6213bbff550d04c880537715eeee49.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="D:\ReactJS\react-native\record_section\android\app\build\intermediates\exploded-aar\com.facebook.soloader\soloader\0.1.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -36,114 +45,6 @@
         revision="23.0.1"
         sha1="af61eb11ffb4296cab0c93218248a3dfcec0a84c">
         <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\com.facebook.react-react-native-0.52.0_860c28eaa7c4a986b143aedf5253e6e5ed4c049d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\ReactJS\react-native\record_section\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-okhttp3\1.3.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
-        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-okhttp3-1.3.0_85cf4ccd783999526803b5f085e562d8b56dae47.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\ReactJS\react-native\record_section\android\app\build\intermediates\exploded-aar\record_section\react-native-fs\unspecified\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="ae5cd2b3992eb36a9b22c4ef27ddf8aaa8cddbf4">
-        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\record_section-react-native-fs-unspecified_de6d3cb59fc2fe9999153540898215eb7725705c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\ReactJS\react-native\record_section\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\1.3.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
-        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-base-1.3.0_b3cb97edd81a2dba8bdf6ba89a9963953c450693.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\SONY\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.0\5871fb60dc68d67da54a663c3fd636a10a532948\jsr305-3.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
-        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\jsr305-3.0.0_01aeed4cee0859846d85767027a8ca1513758fef.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\ReactJS\react-native\record_section\android\app\build\intermediates\exploded-aar\com.facebook.fresco\drawee\1.3.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
-        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-drawee-1.3.0_2eecbfbd6079526839c3a03c1f8deb43d14181dd.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\SONY\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="6975da39a7040257bd51d21a231b76c915872d38">
-        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\javax.inject-1_768cf47946bcbeb9c06ab2773a163de1256af313.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\ReactJS\react-native\record_section\android\app\build\intermediates\exploded-aar\record_section\react-native-document-picker\unspecified\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="7fb6469ebee8229adbaeb2f156504c1160a8ec17">
-        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\record_section-react-native-document-picker-unspecified_6c2e309f07d62a11688386e5fce320afc1b14944.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Android\android-sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
-        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.0_fe2bc74a07fc122e2dad8e0a4b795becdc7471f7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\SONY\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\bolts-tasks-1.4.0_8560c614dfe30b752375db5967d3e323ddecc60e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\ReactJS\react-native\record_section\android\app\build\intermediates\exploded-aar\com.facebook.fbui.textlayoutbuilder\textlayoutbuilder\1.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
-        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_1e7028d95b7f735cbf02a36fd9ecb5322547a2b4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\ReactJS\react-native\record_section\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
-        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.1.0_b21b9d42c4afcec57a22313c011fa5f82b900d97.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\SONY\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.6.0\69edde9fc4b01c9fd51d25b83428837478c27254\okhttp-3.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
-        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\okhttp-3.6.0_f6ec1980ff6213bbff550d04c880537715eeee49.jar" />
     </item>
     <item
         is-multidex="false"
@@ -174,12 +75,30 @@
     </item>
     <item
         is-multidex="false"
-        jar="D:\ReactJS\react-native\record_section\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
+        jar="D:\ReactJS\react-native\record_section\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-okhttp3\1.3.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
-        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.1.0_74164d46c4a42e9ebf2d2999647ffdf31c8080b3.jar" />
+        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
+        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-okhttp3-1.3.0_85cf4ccd783999526803b5f085e562d8b56dae47.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\ReactJS\react-native\record_section\android\app\build\intermediates\exploded-aar\record_section\react-native-fs\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ae5cd2b3992eb36a9b22c4ef27ddf8aaa8cddbf4">
+        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\record_section-react-native-fs-unspecified_de6d3cb59fc2fe9999153540898215eb7725705c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\ReactJS\react-native\record_section\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.1.1_a11acf6ba9c2e1015fbf1e614ef5f9fb163621ae.jar" />
     </item>
     <item
         is-multidex="false"
@@ -192,12 +111,66 @@
     </item>
     <item
         is-multidex="false"
+        jar="D:\ReactJS\react-native\record_section\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-base-1.3.0_b3cb97edd81a2dba8bdf6ba89a9963953c450693.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\SONY\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.0\5871fb60dc68d67da54a663c3fd636a10a532948\jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\jsr305-3.0.0_01aeed4cee0859846d85767027a8ca1513758fef.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Android\android-sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1_9e5639e8226e7e6422cb6c0e211195132dd67f56.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\ReactJS\react-native\record_section\android\app\build\intermediates\exploded-aar\com.facebook.fresco\drawee\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-drawee-1.3.0_2eecbfbd6079526839c3a03c1f8deb43d14181dd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\ReactJS\react-native\record_section\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.1.1_4bee6d134b08e37aafc989aa38f1fad5895bb788.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="D:\ReactJS\react-native\record_section\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fbcore\1.3.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
         <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fbcore-1.3.0_8fb786326c4338707dc6a6a37aa0a5a1c0876be0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\SONY\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\javax.inject-1_768cf47946bcbeb9c06ab2773a163de1256af313.jar" />
     </item>
     <item
         is-multidex="false"
@@ -210,6 +183,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="D:\ReactJS\react-native\record_section\android\app\build\intermediates\exploded-aar\record_section\react-native-document-picker\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="7fb6469ebee8229adbaeb2f156504c1160a8ec17">
+        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\record_section-react-native-document-picker-unspecified_6c2e309f07d62a11688386e5fce320afc1b14944.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\SONY\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp-urlconnection\3.6.0\3f9b16b774f2c36cfd86dd2053d0b3059531dacc\okhttp-urlconnection-3.6.0.jar"
         jumboMode="false"
         optimize="true"
@@ -219,12 +201,30 @@
     </item>
     <item
         is-multidex="false"
-        jar="D:\ReactJS\react-native\record_section\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
+        jar="C:\Users\SONY\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
-        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.0_d576d14013075001dcccf684eb9e49f1f57a6b1d.jar" />
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\bolts-tasks-1.4.0_8560c614dfe30b752375db5967d3e323ddecc60e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\ReactJS\react-native\record_section\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1_ce47d41afe0b8aaa457a04bc67675b2127dfd3db.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\ReactJS\react-native\record_section\android\app\build\intermediates\exploded-aar\com.facebook.fbui.textlayoutbuilder\textlayoutbuilder\1.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_1e7028d95b7f735cbf02a36fd9ecb5322547a2b4.jar" />
     </item>
     <item
         is-multidex="false"
@@ -234,6 +234,15 @@
         revision="23.0.1"
         sha1="f2cf527de8d0bd35d72088fafea02395ba4a9eec">
         <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\record_section-react-native-vector-icons-unspecified_092aeca48ce0e61532e73fefbe50b73d10ccd0a8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\ReactJS\react-native\record_section\android\app\build\intermediates\exploded-aar\record_section\react-native-voice\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="85fb0b91fd172270bf5130f342908eec2aca7d88">
+        <dex dex="D:\ReactJS\react-native\record_section\android\app\build\intermediates\pre-dexed\debug\record_section-react-native-voice-unspecified_7d91421637e4d992ffa405aaca74f494b2f90255.jar" />
     </item>
 
 </items>

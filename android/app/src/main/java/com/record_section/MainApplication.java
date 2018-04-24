@@ -12,6 +12,7 @@ import com.zmxv.RNSound.RNSoundPackage;
 import com.rnfs.RNFSPackage;
 import com.reactnativedocumentpicker.ReactNativeDocumentPicker;
 import com.oblador.vectoricons.VectorIconsPackage;
+import com.wenkesj.voice.VoicePackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -32,7 +33,8 @@ public class MainApplication extends Application implements ReactApplication {
           new RNSoundPackage(),
           new RNFSPackage(),
           new ReactNativeDocumentPicker(), 
-          new VectorIconsPackage()
+          new VectorIconsPackage(),
+          new VoicePackage()
       );
     }
 

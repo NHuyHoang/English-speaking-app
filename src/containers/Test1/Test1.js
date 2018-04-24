@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, View, StyleSheet, Button, TouchableWithoutFeedback, Dimensions, Easing, Animated, NetInfo } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { connect } from 'react-redux';
+import voice from 'react-native-voice'
 
 import uiStyle from '../../components/ui';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
@@ -18,11 +19,12 @@ class Test1 extends React.PureComponent {
             onStart: false,
             onShowResult: false,
             displaySentence: null,
+            result: "",
             indexColor: uiStyle.colors._blue
         }
         this.popIndex = 0;
         this.preparedInput = [];
-        this.timePerSentence = 3;
+        this.timePerSentence = 5;
         this._width = Dimensions.get('window').width;
         this._height = Dimensions.get('window').height;
         this.sentencePanelPos = this._height * 0.65;
@@ -30,6 +32,10 @@ class Test1 extends React.PureComponent {
         this.resultPanelAnim = new Animated.Value(0);
         this._screenHeight = 0;
         this.intervalId = null;
+        this.resultTimmerAnim = new Animated.Value(1);
+        voice.onSpeechResults = this.onSpeechResults.bind(this);
+        voice.onSpeechError = this.onSpeechError.bind(this);
+        //voice.onSpeechEnd = this.onSpeechEnd.bind(this);
     }
 
     onSentencesCountDown = () => {
@@ -54,22 +60,20 @@ class Test1 extends React.PureComponent {
             if (this.testFinhished()) {
                 clearInterval(this.intervalId);
                 this.onFinishHandler();
+                voice.destroy();
                 return;
             }
             this.setState(prevState => {
-                if (prevState.timmer === this.timePerSentence)
+                if (prevState.timmer === this.timePerSentence) {
+                    voice.stop();
                     return {
                         onPause: true,
                     }
-                return { timmer: prevState.timmer + 1 }
-            }, () => {
-                if (this.state.onPause) {
-                    setTimeout(() => {
-                        this.setState({
-                            timmer: 0, onPause: false, displaySentence: this.preparedInput[this.popIndex++],
-                        })
-                    }, 2000);
                 }
+                if (this.state.timmer === 0) {
+                    voice.start("en-US");
+                }
+                return { timmer: prevState.timmer + 1 }
             });
         }, 1000)
 
@@ -113,6 +117,8 @@ class Test1 extends React.PureComponent {
 
     componentWillUnmount() {
         clearInterval(this.intervalId);
+        voice.removeAllListeners();
+        voice.destroy();
     }
 
     onSentencesCountDownHandler = () => {
@@ -123,7 +129,7 @@ class Test1 extends React.PureComponent {
     onSetStartHandler = () => {
         this.preparedInput = this.shuffle([...this.props.sentences]);
         this.setState({ displaySentence: this.preparedInput[this.popIndex++] });
-        this.setState({ onCountDown: false, onStart: true }, () => {
+        this.setState({ onCountDown: false, onStart: true, }, () => {
             this.onSentencesCountDown();
         });
     }
@@ -142,7 +148,7 @@ class Test1 extends React.PureComponent {
     }
 
     testFinhished = () => {
-        return this.popIndex === this.preparedInput.length;
+        return this.popIndex === this.preparedInput.length + 1;
     }
 
     //shuffle senetences
@@ -165,7 +171,80 @@ class Test1 extends React.PureComponent {
         return array;
     }
 
+    onSpeechResults(e) {
 
+        setTimeout(() => {
+            this.setState({ result: e.value[0], onShowResult: true }, () => {
+                setTimeout(() => {
+                    Animated.timing(this.resultTimmerAnim, {
+                        toValue: 0,
+                        duration: 3000,
+                    }).start(() => {
+                        setTimeout(() => {
+                            this.setState({
+                                timmer: 0,
+                                onShowResult: false,
+                                result: "",
+                                displaySentence: ""
+                            }, () => {
+                                setTimeout(() => this.setState({
+                                    onPause: false,
+                                    displaySentence: this.preparedInput[this.popIndex++],
+                                }, () => this.resultTimmerAnim = new Animated.Value(1)), 1000)
+                            })
+                        }, 200);
+                    })
+                }, 200);
+            })
+        }, (this.timePerSentence - this.state.timmer) * 1000 + 200)
+
+    }
+
+    onSpeechEnd(e) {
+        console.log('speech end');
+        setTimeout(() => {
+            Animated.timing(this.resultTimmerAnim, {
+                toValue: 0,
+                duration: 3000,
+            }).start()
+            setTimeout(() => {
+                this.setState({
+                    timmer: 0,
+                    displaySentence: "",
+                    onShowResult: false,
+                    result: "",
+                }, () => {
+                    setTimeout(() => this.setState({
+                        onPause: false,
+                        displaySentence: this.preparedInput[this.popIndex++],
+                    }), 1000)
+                })
+            }, 3000);
+        }, this.state.timePerSentence - this.state.timmer)
+    }
+
+    onSpeechError(e) {
+        console.log('err')
+        if (e.error.message === "6/No speech input") {
+            setTimeout(() => {
+                this.setState({
+                    timmer: 0,
+                    onShowResult: false,
+                    displaySentence: "",
+                    result: "",
+                }, () => {
+                    setTimeout(() => this.setState({
+                        onPause: false,
+                        displaySentence: this.preparedInput[this.popIndex++],
+                    }, ), 1000)
+                })
+            }, 500)
+        }
+    }
+
+    onShowResultHandler(callback) {
+
+    }
 
     render() {
         let sentencePanelTransform = {
@@ -210,11 +289,18 @@ class Test1 extends React.PureComponent {
                     </Animated.View>
                 </Animated.View>
                 <Animated.View style={[styles.resultPanel, resultPanelTransform]}>
-                    <Icon style={{ position: 'absolute', left: 16 }} name="record-voice-over" size={20} />
-                    <Text style={styles.resultTxt}>
-                        {this.state.displaySentence}
-                    </Text>
-
+                    {
+                        this.state.result === "" ?
+                            <Icon name="hearing" size={25} /> :
+                            <Text style={styles.resultTxt}>
+                                {this.state.result}
+                            </Text>
+                    }
+                    {
+                        this.state.onShowResult && <Animated.View style={[styles.resultTimmer, {
+                            transform: [{ scaleX: this.resultTimmerAnim }]
+                        }]} />
+                    }
                 </Animated.View>
                 <UtilComp
                     style={styles.ultiComp}
@@ -303,6 +389,14 @@ const styles = StyleSheet.create({
         fontFamily: uiStyle.fonts.font_bold,
         fontSize: 14,
         textAlign: 'center'
+    },
+    resultTimmer: {
+        backgroundColor: uiStyle.colors._dark_gray,
+        position: 'absolute',
+        height: 4,
+        borderRadius: 3,
+        width: '90%',
+        bottom: 0
     }
 })
 

@@ -11,13 +11,13 @@
                     "endOffset": 158
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hu\\values-hu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-hu\\values-hu.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 287,
+                        "startOffset": 229,
                         "endColumn": 107,
-                        "endOffset": 390
+                        "endOffset": 332
                     }
                 }
             },
@@ -30,13 +30,13 @@
                     "endOffset": 266
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hu\\values-hu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-hu\\values-hu.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
-                        "startOffset": 395,
+                        "startOffset": 337,
                         "endColumn": 107,
-                        "endOffset": 498
+                        "endOffset": 440
                     }
                 }
             },
@@ -49,13 +49,13 @@
                     "endOffset": 389
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hu\\values-hu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-hu\\values-hu.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 503,
+                        "startOffset": 445,
                         "endColumn": 122,
-                        "endOffset": 621
+                        "endOffset": 563
                     }
                 }
             },
@@ -68,13 +68,13 @@
                     "endOffset": 494
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hu\\values-hu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-hu\\values-hu.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
-                        "startOffset": 626,
+                        "startOffset": 568,
                         "endColumn": 104,
-                        "endOffset": 726
+                        "endOffset": 668
                     }
                 }
             },
@@ -87,13 +87,13 @@
                     "endOffset": 609
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hu\\values-hu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-hu\\values-hu.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
-                        "startOffset": 731,
+                        "startOffset": 673,
                         "endColumn": 114,
-                        "endOffset": 841
+                        "endOffset": 783
                     }
                 }
             },
@@ -106,13 +106,13 @@
                     "endOffset": 693
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hu\\values-hu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-hu\\values-hu.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
-                        "startOffset": 846,
+                        "startOffset": 788,
                         "endColumn": 83,
-                        "endOffset": 925
+                        "endOffset": 867
                     }
                 }
             },
@@ -125,13 +125,13 @@
                     "endOffset": 805
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hu\\values-hu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-hu\\values-hu.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
-                        "startOffset": 930,
+                        "startOffset": 872,
                         "endColumn": 111,
-                        "endOffset": 1037
+                        "endOffset": 979
                     }
                 }
             },
@@ -144,13 +144,13 @@
                     "endOffset": 935
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hu\\values-hu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-hu\\values-hu.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
-                        "startOffset": 1042,
+                        "startOffset": 984,
                         "endColumn": 129,
-                        "endOffset": 1167
+                        "endOffset": 1109
                     }
                 }
             },
@@ -163,13 +163,13 @@
                     "endOffset": 1011
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hu\\values-hu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-hu\\values-hu.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
-                        "startOffset": 1172,
+                        "startOffset": 1114,
                         "endColumn": 75,
-                        "endOffset": 1243
+                        "endOffset": 1185
                     }
                 }
             },
@@ -182,13 +182,13 @@
                     "endOffset": 1087
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hu\\values-hu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-hu\\values-hu.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
-                        "startOffset": 1248,
+                        "startOffset": 1190,
                         "endColumn": 75,
-                        "endOffset": 1319
+                        "endOffset": 1261
                     }
                 }
             },
@@ -201,13 +201,13 @@
                     "endOffset": 1170
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hu\\values-hu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-hu\\values-hu.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
-                        "startOffset": 1324,
+                        "startOffset": 1266,
                         "endColumn": 82,
-                        "endOffset": 1402
+                        "endOffset": 1344
                     }
                 }
             },
@@ -220,13 +220,13 @@
                     "endOffset": 1280
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hu\\values-hu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-hu\\values-hu.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 1407,
+                        "startOffset": 1349,
                         "endColumn": 109,
-                        "endOffset": 1512
+                        "endOffset": 1454
                     }
                 }
             },
@@ -239,13 +239,13 @@
                     "endOffset": 1391
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hu\\values-hu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-hu\\values-hu.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 1517,
+                        "startOffset": 1459,
                         "endColumn": 110,
-                        "endOffset": 1623
+                        "endOffset": 1565
                     }
                 }
             },
@@ -258,13 +258,13 @@
                     "endOffset": 1491
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hu\\values-hu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-hu\\values-hu.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
-                        "startOffset": 1628,
+                        "startOffset": 1570,
                         "endColumn": 99,
-                        "endOffset": 1723
+                        "endOffset": 1665
                     }
                 }
             },
@@ -277,13 +277,13 @@
                     "endOffset": 1602
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hu\\values-hu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-hu\\values-hu.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
-                        "startOffset": 1728,
+                        "startOffset": 1670,
                         "endColumn": 110,
-                        "endOffset": 1834
+                        "endOffset": 1776
                     }
                 }
             },
@@ -296,13 +296,13 @@
                     "endOffset": 1710
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hu\\values-hu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-hu\\values-hu.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
-                        "startOffset": 1839,
+                        "startOffset": 1781,
                         "endColumn": 107,
-                        "endOffset": 1942
+                        "endOffset": 1884
                     }
                 }
             },
@@ -315,13 +315,13 @@
                     "endOffset": 1829
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hu\\values-hu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-hu\\values-hu.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
-                        "startOffset": 1947,
+                        "startOffset": 1889,
                         "endColumn": 118,
-                        "endOffset": 2061
+                        "endOffset": 2003
                     }
                 }
             },
@@ -334,13 +334,13 @@
                     "endOffset": 1963
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hu\\values-hu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-hu\\values-hu.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
-                        "startOffset": 2066,
+                        "startOffset": 2008,
                         "endColumn": 133,
-                        "endOffset": 2195
+                        "endOffset": 2137
                     }
                 }
             },
@@ -353,13 +353,13 @@
                     "endOffset": 2066
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hu\\values-hu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-hu\\values-hu.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
-                        "startOffset": 2200,
+                        "startOffset": 2142,
                         "endColumn": 102,
-                        "endOffset": 2298
+                        "endOffset": 2240
                     }
                 }
             },
@@ -372,13 +372,13 @@
                     "endOffset": 2167
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hu\\values-hu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-hu\\values-hu.xml",
                     "position": {
                         "startLine": 23,
                         "startColumn": 4,
-                        "startOffset": 2303,
+                        "startOffset": 2245,
                         "endColumn": 100,
-                        "endOffset": 2399
+                        "endOffset": 2341
                     }
                 }
             }

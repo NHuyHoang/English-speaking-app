@@ -11,13 +11,13 @@
                     "endOffset": 160
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-fa\\values-fa.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-fa\\values-fa.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 287,
+                        "startOffset": 229,
                         "endColumn": 109,
-                        "endOffset": 392
+                        "endOffset": 334
                     }
                 }
             },
@@ -30,13 +30,13 @@
                     "endOffset": 270
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-fa\\values-fa.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-fa\\values-fa.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
-                        "startOffset": 397,
+                        "startOffset": 339,
                         "endColumn": 109,
-                        "endOffset": 502
+                        "endOffset": 444
                     }
                 }
             },
@@ -49,13 +49,13 @@
                     "endOffset": 396
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-fa\\values-fa.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-fa\\values-fa.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 507,
+                        "startOffset": 449,
                         "endColumn": 125,
-                        "endOffset": 628
+                        "endOffset": 570
                     }
                 }
             },
@@ -68,13 +68,13 @@
                     "endOffset": 499
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-fa\\values-fa.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-fa\\values-fa.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
-                        "startOffset": 633,
+                        "startOffset": 575,
                         "endColumn": 102,
-                        "endOffset": 731
+                        "endOffset": 673
                     }
                 }
             },
@@ -87,13 +87,13 @@
                     "endOffset": 610
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-fa\\values-fa.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-fa\\values-fa.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
-                        "startOffset": 736,
+                        "startOffset": 678,
                         "endColumn": 110,
-                        "endOffset": 842
+                        "endOffset": 784
                     }
                 }
             },
@@ -106,13 +106,13 @@
                     "endOffset": 694
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-fa\\values-fa.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-fa\\values-fa.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
-                        "startOffset": 847,
+                        "startOffset": 789,
                         "endColumn": 83,
-                        "endOffset": 926
+                        "endOffset": 868
                     }
                 }
             },
@@ -125,13 +125,13 @@
                     "endOffset": 797
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-fa\\values-fa.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-fa\\values-fa.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
-                        "startOffset": 931,
+                        "startOffset": 873,
                         "endColumn": 102,
-                        "endOffset": 1029
+                        "endOffset": 971
                     }
                 }
             },
@@ -144,13 +144,13 @@
                     "endOffset": 912
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-fa\\values-fa.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-fa\\values-fa.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
-                        "startOffset": 1034,
+                        "startOffset": 976,
                         "endColumn": 114,
-                        "endOffset": 1144
+                        "endOffset": 1086
                     }
                 }
             },
@@ -163,13 +163,13 @@
                     "endOffset": 991
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-fa\\values-fa.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-fa\\values-fa.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
-                        "startOffset": 1149,
+                        "startOffset": 1091,
                         "endColumn": 78,
-                        "endOffset": 1223
+                        "endOffset": 1165
                     }
                 }
             },
@@ -182,13 +182,13 @@
                     "endOffset": 1069
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-fa\\values-fa.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-fa\\values-fa.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
-                        "startOffset": 1228,
+                        "startOffset": 1170,
                         "endColumn": 77,
-                        "endOffset": 1301
+                        "endOffset": 1243
                     }
                 }
             },
@@ -201,13 +201,13 @@
                     "endOffset": 1150
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-fa\\values-fa.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-fa\\values-fa.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
-                        "startOffset": 1306,
+                        "startOffset": 1248,
                         "endColumn": 80,
-                        "endOffset": 1382
+                        "endOffset": 1324
                     }
                 }
             },
@@ -220,13 +220,13 @@
                     "endOffset": 1262
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-fa\\values-fa.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-fa\\values-fa.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 1387,
+                        "startOffset": 1329,
                         "endColumn": 111,
-                        "endOffset": 1494
+                        "endOffset": 1436
                     }
                 }
             },
@@ -239,13 +239,13 @@
                     "endOffset": 1365
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-fa\\values-fa.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-fa\\values-fa.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 1499,
+                        "startOffset": 1441,
                         "endColumn": 102,
-                        "endOffset": 1597
+                        "endOffset": 1539
                     }
                 }
             },
@@ -258,13 +258,13 @@
                     "endOffset": 1463
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-fa\\values-fa.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-fa\\values-fa.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
-                        "startOffset": 1602,
+                        "startOffset": 1544,
                         "endColumn": 97,
-                        "endOffset": 1695
+                        "endOffset": 1637
                     }
                 }
             },
@@ -277,13 +277,13 @@
                     "endOffset": 1573
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-fa\\values-fa.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-fa\\values-fa.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
-                        "startOffset": 1700,
+                        "startOffset": 1642,
                         "endColumn": 109,
-                        "endOffset": 1805
+                        "endOffset": 1747
                     }
                 }
             },
@@ -296,13 +296,13 @@
                     "endOffset": 1676
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-fa\\values-fa.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-fa\\values-fa.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
-                        "startOffset": 1810,
+                        "startOffset": 1752,
                         "endColumn": 102,
-                        "endOffset": 1908
+                        "endOffset": 1850
                     }
                 }
             },
@@ -315,13 +315,13 @@
                     "endOffset": 1785
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-fa\\values-fa.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-fa\\values-fa.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
-                        "startOffset": 1913,
+                        "startOffset": 1855,
                         "endColumn": 108,
-                        "endOffset": 2017
+                        "endOffset": 1959
                     }
                 }
             },
@@ -334,13 +334,13 @@
                     "endOffset": 1910
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-fa\\values-fa.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-fa\\values-fa.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
-                        "startOffset": 2022,
+                        "startOffset": 1964,
                         "endColumn": 124,
-                        "endOffset": 2142
+                        "endOffset": 2084
                     }
                 }
             },
@@ -353,13 +353,13 @@
                     "endOffset": 2011
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-fa\\values-fa.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-fa\\values-fa.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
-                        "startOffset": 2147,
+                        "startOffset": 2089,
                         "endColumn": 100,
-                        "endOffset": 2243
+                        "endOffset": 2185
                     }
                 }
             },
@@ -372,13 +372,13 @@
                     "endOffset": 2112
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-fa\\values-fa.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-fa\\values-fa.xml",
                     "position": {
                         "startLine": 23,
                         "startColumn": 4,
-                        "startOffset": 2248,
+                        "startOffset": 2190,
                         "endColumn": 100,
-                        "endOffset": 2344
+                        "endOffset": 2286
                     }
                 }
             }

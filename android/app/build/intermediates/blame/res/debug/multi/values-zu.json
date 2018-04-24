@@ -11,13 +11,13 @@
                     "endOffset": 158
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-zu\\values-zu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zu\\values-zu.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 287,
+                        "startOffset": 229,
                         "endColumn": 107,
-                        "endOffset": 390
+                        "endOffset": 332
                     }
                 }
             },
@@ -30,13 +30,13 @@
                     "endOffset": 266
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-zu\\values-zu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zu\\values-zu.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
-                        "startOffset": 395,
+                        "startOffset": 337,
                         "endColumn": 107,
-                        "endOffset": 498
+                        "endOffset": 440
                     }
                 }
             },
@@ -49,13 +49,13 @@
                     "endOffset": 389
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-zu\\values-zu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zu\\values-zu.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 503,
+                        "startOffset": 445,
                         "endColumn": 122,
-                        "endOffset": 621
+                        "endOffset": 563
                     }
                 }
             },
@@ -68,13 +68,13 @@
                     "endOffset": 496
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-zu\\values-zu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zu\\values-zu.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
-                        "startOffset": 626,
+                        "startOffset": 568,
                         "endColumn": 106,
-                        "endOffset": 728
+                        "endOffset": 670
                     }
                 }
             },
@@ -87,13 +87,13 @@
                     "endOffset": 610
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-zu\\values-zu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zu\\values-zu.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
-                        "startOffset": 733,
+                        "startOffset": 675,
                         "endColumn": 113,
-                        "endOffset": 842
+                        "endOffset": 784
                     }
                 }
             },
@@ -106,13 +106,13 @@
                     "endOffset": 698
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-zu\\values-zu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zu\\values-zu.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
-                        "startOffset": 847,
+                        "startOffset": 789,
                         "endColumn": 87,
-                        "endOffset": 930
+                        "endOffset": 872
                     }
                 }
             },
@@ -125,13 +125,13 @@
                     "endOffset": 801
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-zu\\values-zu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zu\\values-zu.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
-                        "startOffset": 935,
+                        "startOffset": 877,
                         "endColumn": 102,
-                        "endOffset": 1033
+                        "endOffset": 975
                     }
                 }
             },
@@ -144,13 +144,13 @@
                     "endOffset": 928
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-zu\\values-zu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zu\\values-zu.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
-                        "startOffset": 1038,
+                        "startOffset": 980,
                         "endColumn": 126,
-                        "endOffset": 1160
+                        "endOffset": 1102
                     }
                 }
             },
@@ -163,13 +163,13 @@
                     "endOffset": 1008
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-zu\\values-zu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zu\\values-zu.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
-                        "startOffset": 1165,
+                        "startOffset": 1107,
                         "endColumn": 79,
-                        "endOffset": 1240
+                        "endOffset": 1182
                     }
                 }
             },
@@ -182,13 +182,13 @@
                     "endOffset": 1088
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-zu\\values-zu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zu\\values-zu.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
-                        "startOffset": 1245,
+                        "startOffset": 1187,
                         "endColumn": 79,
-                        "endOffset": 1320
+                        "endOffset": 1262
                     }
                 }
             },
@@ -201,13 +201,13 @@
                     "endOffset": 1174
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-zu\\values-zu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zu\\values-zu.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
-                        "startOffset": 1325,
+                        "startOffset": 1267,
                         "endColumn": 85,
-                        "endOffset": 1406
+                        "endOffset": 1348
                     }
                 }
             },
@@ -220,13 +220,13 @@
                     "endOffset": 1278
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-zu\\values-zu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zu\\values-zu.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 1411,
+                        "startOffset": 1353,
                         "endColumn": 103,
-                        "endOffset": 1510
+                        "endOffset": 1452
                     }
                 }
             },
@@ -239,13 +239,13 @@
                     "endOffset": 1384
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-zu\\values-zu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zu\\values-zu.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 1515,
+                        "startOffset": 1457,
                         "endColumn": 105,
-                        "endOffset": 1616
+                        "endOffset": 1558
                     }
                 }
             },
@@ -258,13 +258,13 @@
                     "endOffset": 1482
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-zu\\values-zu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zu\\values-zu.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
-                        "startOffset": 1621,
+                        "startOffset": 1563,
                         "endColumn": 97,
-                        "endOffset": 1714
+                        "endOffset": 1656
                     }
                 }
             },
@@ -277,13 +277,13 @@
                     "endOffset": 1589
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-zu\\values-zu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zu\\values-zu.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
-                        "startOffset": 1719,
+                        "startOffset": 1661,
                         "endColumn": 106,
-                        "endOffset": 1821
+                        "endOffset": 1763
                     }
                 }
             },
@@ -296,13 +296,13 @@
                     "endOffset": 1695
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-zu\\values-zu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zu\\values-zu.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
-                        "startOffset": 1826,
+                        "startOffset": 1768,
                         "endColumn": 105,
-                        "endOffset": 1927
+                        "endOffset": 1869
                     }
                 }
             },
@@ -315,13 +315,13 @@
                     "endOffset": 1801
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-zu\\values-zu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zu\\values-zu.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
-                        "startOffset": 1932,
+                        "startOffset": 1874,
                         "endColumn": 105,
-                        "endOffset": 2033
+                        "endOffset": 1975
                     }
                 }
             },
@@ -334,13 +334,13 @@
                     "endOffset": 1921
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-zu\\values-zu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zu\\values-zu.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
-                        "startOffset": 2038,
+                        "startOffset": 1980,
                         "endColumn": 119,
-                        "endOffset": 2153
+                        "endOffset": 2095
                     }
                 }
             },
@@ -353,13 +353,13 @@
                     "endOffset": 2017
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-zu\\values-zu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zu\\values-zu.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
-                        "startOffset": 2158,
+                        "startOffset": 2100,
                         "endColumn": 95,
-                        "endOffset": 2249
+                        "endOffset": 2191
                     }
                 }
             },
@@ -372,13 +372,13 @@
                     "endOffset": 2118
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-zu\\values-zu.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zu\\values-zu.xml",
                     "position": {
                         "startLine": 23,
                         "startColumn": 4,
-                        "startOffset": 2254,
+                        "startOffset": 2196,
                         "endColumn": 100,
-                        "endOffset": 2350
+                        "endOffset": 2292
                     }
                 }
             }

@@ -11,13 +11,13 @@
                     "endOffset": 154
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-iw\\values-iw.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-iw\\values-iw.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 287,
+                        "startOffset": 229,
                         "endColumn": 103,
-                        "endOffset": 386
+                        "endOffset": 328
                     }
                 }
             },
@@ -30,13 +30,13 @@
                     "endOffset": 264
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-iw\\values-iw.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-iw\\values-iw.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
-                        "startOffset": 391,
+                        "startOffset": 333,
                         "endColumn": 109,
-                        "endOffset": 496
+                        "endOffset": 438
                     }
                 }
             },
@@ -49,13 +49,13 @@
                     "endOffset": 390
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-iw\\values-iw.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-iw\\values-iw.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 501,
+                        "startOffset": 443,
                         "endColumn": 125,
-                        "endOffset": 622
+                        "endOffset": 564
                     }
                 }
             },
@@ -68,13 +68,13 @@
                     "endOffset": 489
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-iw\\values-iw.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-iw\\values-iw.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
-                        "startOffset": 627,
+                        "startOffset": 569,
                         "endColumn": 98,
-                        "endOffset": 721
+                        "endOffset": 663
                     }
                 }
             },
@@ -87,13 +87,13 @@
                     "endOffset": 597
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-iw\\values-iw.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-iw\\values-iw.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
-                        "startOffset": 726,
+                        "startOffset": 668,
                         "endColumn": 107,
-                        "endOffset": 829
+                        "endOffset": 771
                     }
                 }
             },
@@ -106,13 +106,13 @@
                     "endOffset": 681
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-iw\\values-iw.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-iw\\values-iw.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
-                        "startOffset": 834,
+                        "startOffset": 776,
                         "endColumn": 83,
-                        "endOffset": 913
+                        "endOffset": 855
                     }
                 }
             },
@@ -125,13 +125,13 @@
                     "endOffset": 781
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-iw\\values-iw.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-iw\\values-iw.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
-                        "startOffset": 918,
+                        "startOffset": 860,
                         "endColumn": 99,
-                        "endOffset": 1013
+                        "endOffset": 955
                     }
                 }
             },
@@ -144,13 +144,13 @@
                     "endOffset": 895
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-iw\\values-iw.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-iw\\values-iw.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
-                        "startOffset": 1018,
+                        "startOffset": 960,
                         "endColumn": 113,
-                        "endOffset": 1127
+                        "endOffset": 1069
                     }
                 }
             },
@@ -163,13 +163,13 @@
                     "endOffset": 973
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-iw\\values-iw.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-iw\\values-iw.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
-                        "startOffset": 1132,
+                        "startOffset": 1074,
                         "endColumn": 77,
-                        "endOffset": 1205
+                        "endOffset": 1147
                     }
                 }
             },
@@ -182,13 +182,13 @@
                     "endOffset": 1051
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-iw\\values-iw.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-iw\\values-iw.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
-                        "startOffset": 1210,
+                        "startOffset": 1152,
                         "endColumn": 77,
-                        "endOffset": 1283
+                        "endOffset": 1225
                     }
                 }
             },
@@ -201,13 +201,13 @@
                     "endOffset": 1130
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-iw\\values-iw.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-iw\\values-iw.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
-                        "startOffset": 1288,
+                        "startOffset": 1230,
                         "endColumn": 78,
-                        "endOffset": 1362
+                        "endOffset": 1304
                     }
                 }
             },
@@ -220,13 +220,13 @@
                     "endOffset": 1232
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-iw\\values-iw.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-iw\\values-iw.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 1367,
+                        "startOffset": 1309,
                         "endColumn": 101,
-                        "endOffset": 1464
+                        "endOffset": 1406
                     }
                 }
             },
@@ -239,13 +239,13 @@
                     "endOffset": 1336
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-iw\\values-iw.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-iw\\values-iw.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 1469,
+                        "startOffset": 1411,
                         "endColumn": 103,
-                        "endOffset": 1568
+                        "endOffset": 1510
                     }
                 }
             },
@@ -258,13 +258,13 @@
                     "endOffset": 1432
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-iw\\values-iw.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-iw\\values-iw.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
-                        "startOffset": 1573,
+                        "startOffset": 1515,
                         "endColumn": 95,
-                        "endOffset": 1664
+                        "endOffset": 1606
                     }
                 }
             },
@@ -277,13 +277,13 @@
                     "endOffset": 1535
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-iw\\values-iw.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-iw\\values-iw.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
-                        "startOffset": 1669,
+                        "startOffset": 1611,
                         "endColumn": 102,
-                        "endOffset": 1767
+                        "endOffset": 1709
                     }
                 }
             },
@@ -296,13 +296,13 @@
                     "endOffset": 1636
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-iw\\values-iw.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-iw\\values-iw.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
-                        "startOffset": 1772,
+                        "startOffset": 1714,
                         "endColumn": 100,
-                        "endOffset": 1868
+                        "endOffset": 1810
                     }
                 }
             },
@@ -315,13 +315,13 @@
                     "endOffset": 1736
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-iw\\values-iw.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-iw\\values-iw.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
-                        "startOffset": 1873,
+                        "startOffset": 1815,
                         "endColumn": 99,
-                        "endOffset": 1968
+                        "endOffset": 1910
                     }
                 }
             },
@@ -334,13 +334,13 @@
                     "endOffset": 1852
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-iw\\values-iw.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-iw\\values-iw.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
-                        "startOffset": 1973,
+                        "startOffset": 1915,
                         "endColumn": 115,
-                        "endOffset": 2084
+                        "endOffset": 2026
                     }
                 }
             },
@@ -353,13 +353,13 @@
                     "endOffset": 1948
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-iw\\values-iw.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-iw\\values-iw.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
-                        "startOffset": 2089,
+                        "startOffset": 2031,
                         "endColumn": 95,
-                        "endOffset": 2180
+                        "endOffset": 2122
                     }
                 }
             },
@@ -372,13 +372,13 @@
                     "endOffset": 2051
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-iw\\values-iw.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-iw\\values-iw.xml",
                     "position": {
                         "startLine": 23,
                         "startColumn": 4,
-                        "startOffset": 2185,
+                        "startOffset": 2127,
                         "endColumn": 102,
-                        "endOffset": 2283
+                        "endOffset": 2225
                     }
                 }
             }

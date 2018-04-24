@@ -11,13 +11,13 @@
                     "endOffset": 145
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-ko\\values-ko.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-ko\\values-ko.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 287,
+                        "startOffset": 229,
                         "endColumn": 94,
-                        "endOffset": 377
+                        "endOffset": 319
                     }
                 }
             },
@@ -30,13 +30,13 @@
                     "endOffset": 253
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-ko\\values-ko.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-ko\\values-ko.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
-                        "startOffset": 382,
+                        "startOffset": 324,
                         "endColumn": 107,
-                        "endOffset": 485
+                        "endOffset": 427
                     }
                 }
             },
@@ -49,13 +49,13 @@
                     "endOffset": 376
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-ko\\values-ko.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-ko\\values-ko.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 490,
+                        "startOffset": 432,
                         "endColumn": 122,
-                        "endOffset": 608
+                        "endOffset": 550
                     }
                 }
             },
@@ -68,13 +68,13 @@
                     "endOffset": 470
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-ko\\values-ko.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-ko\\values-ko.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
-                        "startOffset": 613,
+                        "startOffset": 555,
                         "endColumn": 93,
-                        "endOffset": 702
+                        "endOffset": 644
                     }
                 }
             },
@@ -87,13 +87,13 @@
                     "endOffset": 572
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-ko\\values-ko.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-ko\\values-ko.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
-                        "startOffset": 707,
+                        "startOffset": 649,
                         "endColumn": 101,
-                        "endOffset": 804
+                        "endOffset": 746
                     }
                 }
             },
@@ -106,13 +106,13 @@
                     "endOffset": 654
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-ko\\values-ko.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-ko\\values-ko.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
-                        "startOffset": 809,
+                        "startOffset": 751,
                         "endColumn": 81,
-                        "endOffset": 886
+                        "endOffset": 828
                     }
                 }
             },
@@ -125,13 +125,13 @@
                     "endOffset": 752
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-ko\\values-ko.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-ko\\values-ko.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
-                        "startOffset": 891,
+                        "startOffset": 833,
                         "endColumn": 97,
-                        "endOffset": 984
+                        "endOffset": 926
                     }
                 }
             },
@@ -144,13 +144,13 @@
                     "endOffset": 858
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-ko\\values-ko.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-ko\\values-ko.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
-                        "startOffset": 989,
+                        "startOffset": 931,
                         "endColumn": 105,
-                        "endOffset": 1090
+                        "endOffset": 1032
                     }
                 }
             },
@@ -163,13 +163,13 @@
                     "endOffset": 937
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-ko\\values-ko.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-ko\\values-ko.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
-                        "startOffset": 1095,
+                        "startOffset": 1037,
                         "endColumn": 78,
-                        "endOffset": 1169
+                        "endOffset": 1111
                     }
                 }
             },
@@ -182,13 +182,13 @@
                     "endOffset": 1013
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-ko\\values-ko.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-ko\\values-ko.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
-                        "startOffset": 1174,
+                        "startOffset": 1116,
                         "endColumn": 75,
-                        "endOffset": 1245
+                        "endOffset": 1187
                     }
                 }
             },
@@ -201,13 +201,13 @@
                     "endOffset": 1093
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-ko\\values-ko.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-ko\\values-ko.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
-                        "startOffset": 1250,
+                        "startOffset": 1192,
                         "endColumn": 79,
-                        "endOffset": 1325
+                        "endOffset": 1267
                     }
                 }
             },
@@ -220,13 +220,13 @@
                     "endOffset": 1191
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-ko\\values-ko.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-ko\\values-ko.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 1330,
+                        "startOffset": 1272,
                         "endColumn": 97,
-                        "endOffset": 1423
+                        "endOffset": 1365
                     }
                 }
             },
@@ -239,13 +239,13 @@
                     "endOffset": 1286
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-ko\\values-ko.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-ko\\values-ko.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 1428,
+                        "startOffset": 1370,
                         "endColumn": 94,
-                        "endOffset": 1518
+                        "endOffset": 1460
                     }
                 }
             },
@@ -258,13 +258,13 @@
                     "endOffset": 1381
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-ko\\values-ko.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-ko\\values-ko.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
-                        "startOffset": 1523,
+                        "startOffset": 1465,
                         "endColumn": 94,
-                        "endOffset": 1613
+                        "endOffset": 1555
                     }
                 }
             },
@@ -277,13 +277,13 @@
                     "endOffset": 1481
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-ko\\values-ko.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-ko\\values-ko.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
-                        "startOffset": 1618,
+                        "startOffset": 1560,
                         "endColumn": 99,
-                        "endOffset": 1713
+                        "endOffset": 1655
                     }
                 }
             },
@@ -296,13 +296,13 @@
                     "endOffset": 1577
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-ko\\values-ko.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-ko\\values-ko.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
-                        "startOffset": 1718,
+                        "startOffset": 1660,
                         "endColumn": 95,
-                        "endOffset": 1809
+                        "endOffset": 1751
                     }
                 }
             },
@@ -315,13 +315,13 @@
                     "endOffset": 1676
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-ko\\values-ko.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-ko\\values-ko.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
-                        "startOffset": 1814,
+                        "startOffset": 1756,
                         "endColumn": 98,
-                        "endOffset": 1908
+                        "endOffset": 1850
                     }
                 }
             },
@@ -334,13 +334,13 @@
                     "endOffset": 1791
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-ko\\values-ko.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-ko\\values-ko.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
-                        "startOffset": 1913,
+                        "startOffset": 1855,
                         "endColumn": 114,
-                        "endOffset": 2023
+                        "endOffset": 1965
                     }
                 }
             },
@@ -353,13 +353,13 @@
                     "endOffset": 1885
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-ko\\values-ko.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-ko\\values-ko.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
-                        "startOffset": 2028,
+                        "startOffset": 1970,
                         "endColumn": 93,
-                        "endOffset": 2117
+                        "endOffset": 2059
                     }
                 }
             },
@@ -372,13 +372,13 @@
                     "endOffset": 1986
                 },
                 "from": {
-                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-ko\\values-ko.xml",
+                    "file": "D:\\ReactJS\\react-native\\record_section\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-ko\\values-ko.xml",
                     "position": {
                         "startLine": 23,
                         "startColumn": 4,
-                        "startOffset": 2122,
+                        "startOffset": 2064,
                         "endColumn": 100,
-                        "endOffset": 2218
+                        "endOffset": 2160
                     }
                 }
             }
